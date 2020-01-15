@@ -35,16 +35,18 @@ class SalesforceSourceFormProperties(object):
     openapi_types = {
         'anchor_time': 'str',
         'api_type': 'str',
-        'cron_expression': 'str'
+        'cron_expression': 'str',
+        'frequency_in_minutes': 'str'
     }
 
     attribute_map = {
         'anchor_time': 'anchor_time',
         'api_type': 'api_type',
-        'cron_expression': 'cron_expression'
+        'cron_expression': 'cron_expression',
+        'frequency_in_minutes': 'frequency_in_minutes'
     }
 
-    def __init__(self, anchor_time=None, api_type=None, cron_expression=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, anchor_time=None, api_type=None, cron_expression=None, frequency_in_minutes=None, local_vars_configuration=None):  # noqa: E501
         """SalesforceSourceFormProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -53,6 +55,7 @@ class SalesforceSourceFormProperties(object):
         self._anchor_time = None
         self._api_type = None
         self._cron_expression = None
+        self._frequency_in_minutes = None
         self.discriminator = None
 
         if anchor_time is not None:
@@ -61,6 +64,8 @@ class SalesforceSourceFormProperties(object):
             self.api_type = api_type
         if cron_expression is not None:
             self.cron_expression = cron_expression
+        if frequency_in_minutes is not None:
+            self.frequency_in_minutes = frequency_in_minutes
 
     @property
     def anchor_time(self):
@@ -130,6 +135,35 @@ class SalesforceSourceFormProperties(object):
         """
 
         self._cron_expression = cron_expression
+
+    @property
+    def frequency_in_minutes(self):
+        """Gets the frequency_in_minutes of this SalesforceSourceFormProperties.  # noqa: E501
+
+        Defines how often, in minutes, Stitch should attempt to replicate data from Salesforce. Accepted values are: - 30 - 60 - 360 - 720 - 1440   # noqa: E501
+
+        :return: The frequency_in_minutes of this SalesforceSourceFormProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._frequency_in_minutes
+
+    @frequency_in_minutes.setter
+    def frequency_in_minutes(self, frequency_in_minutes):
+        """Sets the frequency_in_minutes of this SalesforceSourceFormProperties.
+
+        Defines how often, in minutes, Stitch should attempt to replicate data from Salesforce. Accepted values are: - 30 - 60 - 360 - 720 - 1440   # noqa: E501
+
+        :param frequency_in_minutes: The frequency_in_minutes of this SalesforceSourceFormProperties.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["30", "60", "360", "720", "1440"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and frequency_in_minutes not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `frequency_in_minutes` ({0}), must be one of {1}"  # noqa: E501
+                .format(frequency_in_minutes, allowed_values)
+            )
+
+        self._frequency_in_minutes = frequency_in_minutes
 
     def to_dict(self):
         """Returns the model properties as a dict"""
