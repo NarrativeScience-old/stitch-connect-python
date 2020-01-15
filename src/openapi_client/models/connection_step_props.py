@@ -150,7 +150,7 @@ class ConnectionStepProps(object):
     def property_type(self):
         """Gets the property_type of this ConnectionStepProps.  # noqa: E501
 
-        Indicates the type of the property. Possible values are: user_provided - Indicates the property must be set by the user. read_only - Indicates the property is read-only and is not settable by the API. Generally, this is an internal field set inside of Stitch. system_provided_by_default - Indicates the property used to be system_provided: true, but can now be set by the API consumer. These are generally properties associated with OAuth for generating refresh and access tokens. Note: Use caution when setting these properties, as using incorrect values can put the source into a non-functioning state.   # noqa: E501
+        Indicates the type of the property. Possible values are: user_provided - Indicates the property must be set by the user. read_only - Indicates the property is read-only and is not settable by the  Generally, this is an internal field set inside of Stitch. system_provided_by_default - Indicates the property used to be system_provided: true, but can now be set by the API consumer. These are generally properties associated with OAuth for generating refresh and access tokens. Note: Use caution when setting these properties, as using incorrect values can put the source into a non-functioning state.   # noqa: E501
 
         :return: The property_type of this ConnectionStepProps.  # noqa: E501
         :rtype: str
@@ -161,7 +161,7 @@ class ConnectionStepProps(object):
     def property_type(self, property_type):
         """Sets the property_type of this ConnectionStepProps.
 
-        Indicates the type of the property. Possible values are: user_provided - Indicates the property must be set by the user. read_only - Indicates the property is read-only and is not settable by the API. Generally, this is an internal field set inside of Stitch. system_provided_by_default - Indicates the property used to be system_provided: true, but can now be set by the API consumer. These are generally properties associated with OAuth for generating refresh and access tokens. Note: Use caution when setting these properties, as using incorrect values can put the source into a non-functioning state.   # noqa: E501
+        Indicates the type of the property. Possible values are: user_provided - Indicates the property must be set by the user. read_only - Indicates the property is read-only and is not settable by the  Generally, this is an internal field set inside of Stitch. system_provided_by_default - Indicates the property used to be system_provided: true, but can now be set by the API consumer. These are generally properties associated with OAuth for generating refresh and access tokens. Note: Use caution when setting these properties, as using incorrect values can put the source into a non-functioning state.   # noqa: E501
 
         :param property_type: The property_type of this ConnectionStepProps.  # noqa: E501
         :type: str

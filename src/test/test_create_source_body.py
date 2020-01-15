@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import openapi_client
-from openapi_client.models.inline_object import InlineObject  # noqa: E501
+from openapi_client.models.create_source_body import CreateSourceBody  # noqa: E501
 from openapi_client.rest import ApiException
 
 
-class TestInlineObject(unittest.TestCase):
-    """InlineObject unit test stubs"""
+class TestCreateSourceBody(unittest.TestCase):
+    """CreateSourceBody unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestInlineObject(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testInlineObject(self):
-        """Test InlineObject"""
+    def testCreateSourceBody(self):
+        """Test CreateSourceBody"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = openapi_client.models.inline_object.InlineObject()  # noqa: E501
+        # model = openapi_client.models.create_source_body.CreateSourceBody()  # noqa: E501
         pass
 
 

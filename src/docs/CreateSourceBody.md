@@ -1,5 +1,6 @@
-# InlineObject
+# CreateSourceBody
 
+Request body for creating a new source
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

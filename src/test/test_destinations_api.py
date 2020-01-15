@@ -28,29 +28,36 @@ class TestDestinationsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_api_create_destination(self):
-        """Test case for api_create_destination
+    def test_create_destination(self):
+        """Test case for create_destination
 
         Creates a new destination. Only a single destination is supported per Stitch client account.   # noqa: E501
         """
         pass
 
-    def test_api_delete_destination(self):
-        """Test case for api_delete_destination
+    def test_delete_destination(self):
+        """Test case for delete_destination
 
         Deletes an existing destination. Note: Stitch requires a destination to replicate data. Replication will be paused until a new destination is created and has a successful connection.   # noqa: E501
         """
         pass
 
-    def test_api_get_destinations(self):
-        """Test case for api_get_destinations
+    def test_get_destination_types(self):
+        """Test case for get_destination_types
+
+        Retrieves general information about the configuration required for all supported destination types.   # noqa: E501
+        """
+        pass
+
+    def test_get_destinations(self):
+        """Test case for get_destinations
 
         Lists the destination currently in use for a Stitch account. Only a single data warehouse is supported per Stitch client account.   # noqa: E501
         """
         pass
 
-    def test_api_update_destination(self):
-        """Test case for api_update_destination
+    def test_update_destination(self):
+        """Test case for update_destination
 
         Updates an existing destination. Modifications to the type attribute are not supported.   # noqa: E501
         """

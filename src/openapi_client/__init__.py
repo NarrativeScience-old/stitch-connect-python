@@ -17,9 +17,9 @@ from __future__ import absolute_import
 __version__ = "1.0.0"
 
 # import apis into sdk package
-from openapi_client.api.destination_types_api import DestinationTypesApi
 from openapi_client.api.destinations_api import DestinationsApi
 from openapi_client.api.sources_api import SourcesApi
+from openapi_client.api.streams_api import StreamsApi
 
 # import ApiClient
 from openapi_client.api_client import ApiClient
@@ -37,19 +37,25 @@ from openapi_client.models.connection_step import ConnectionStep
 from openapi_client.models.connection_step_props import ConnectionStepProps
 from openapi_client.models.connection_step_props_any_of import ConnectionStepPropsAnyOf
 from openapi_client.models.connection_step_props_json_schema import ConnectionStepPropsJsonSchema
+from openapi_client.models.create_source_body import CreateSourceBody
 from openapi_client.models.destination import Destination
 from openapi_client.models.destination_form_properties import DestinationFormProperties
 from openapi_client.models.destination_info import DestinationInfo
 from openapi_client.models.destination_report_card import DestinationReportCard
 from openapi_client.models.error_object import ErrorObject
 from openapi_client.models.error_object_error import ErrorObjectError
+from openapi_client.models.field_level_metadata import FieldLevelMetadata
 from openapi_client.models.hook_notification import HookNotification
 from openapi_client.models.hook_notification_config import HookNotificationConfig
-from openapi_client.models.inline_object import InlineObject
+from openapi_client.models.metadata import Metadata
 from openapi_client.models.replication_job import ReplicationJob
 from openapi_client.models.s3_destination_form_properties import S3DestinationFormProperties
 from openapi_client.models.salesforce_source_form_properties import SalesforceSourceFormProperties
 from openapi_client.models.source import Source
 from openapi_client.models.source_form_properties import SourceFormProperties
 from openapi_client.models.source_report_card import SourceReportCard
+from openapi_client.models.stream import Stream
+from openapi_client.models.stream_level_metadata import StreamLevelMetadata
+from openapi_client.models.stream_schema import StreamSchema
+from openapi_client.models.update_source_body import UpdateSourceBody
 

@@ -33,7 +33,7 @@ class Configuration(object):
     :param password: Password for HTTP basic authentication
     """
 
-    def __init__(self, host="https://api.stitchdata.com",
+    def __init__(self, host="https://stitchdata.com",
                  api_key=None, api_key_prefix=None,
                  username="", password=""):
         """Constructor
@@ -270,7 +270,7 @@ class Configuration(object):
         """
         return [
             {
-                'url': "https://api.stitchdata.com",
+                'url': "https://stitchdata.com",
                 'description': "Stitch Connect",
             }
         ]

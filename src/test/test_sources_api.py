@@ -28,31 +28,52 @@ class TestSourcesApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_api_create_source(self):
-        """Test case for api_create_source
+    def test_create_source(self):
+        """Test case for create_source
 
         Creates a source object, which is the first step in setting up a new data source. After the source object is created, additional configuration steps must be completed.   # noqa: E501
         """
         pass
 
-    def test_api_get_last_connection_check(self):
-        """Test case for api_get_last_connection_check
+    def test_delete_source(self):
+        """Test case for delete_source
+
+        Deletes an existing data source.  # noqa: E501
+        """
+        pass
+
+    def test_get_last_connection_check(self):
+        """Test case for get_last_connection_check
 
         Retrieves the last connection check for a source by the source’s unique identifier.   # noqa: E501
         """
         pass
 
-    def test_api_get_sources(self):
-        """Test case for api_get_sources
+    def test_get_source(self):
+        """Test case for get_source
+
+        Retrieves a previously created data source by its unique identifier. This endpoint can be used to retrieve an active, paused, or deleted source.   # noqa: E501
+        """
+        pass
+
+    def test_get_sources(self):
+        """Test case for get_sources
 
         Lists the sources for an account, including active, paused, and deleted sources.   # noqa: E501
         """
         pass
 
-    def test_api_start_replication(self):
-        """Test case for api_start_replication
+    def test_start_replication(self):
+        """Test case for start_replication
 
         Manually starts a replication job for a source using the source’s unique identifier.   # noqa: E501
+        """
+        pass
+
+    def test_update_source(self):
+        """Test case for update_source
+
+        Updates an existing data source.  # noqa: E501
         """
         pass
 

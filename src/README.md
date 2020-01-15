@@ -55,35 +55,41 @@ configuration = openapi_client.Configuration()
 # Configure Bearer authorization: bearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.stitchdata.com
-configuration.host = "https://api.stitchdata.com"
+# Defining host is optional and default to https://stitchdata.com
+configuration.host = "https://stitchdata.com"
 # Create an instance of the API class
-api_instance = openapi_client.DestinationTypesApi(openapi_client.ApiClient(configuration))
+api_instance = openapi_client.DestinationsApi(openapi_client.ApiClient(configuration))
+destination_info = openapi_client.DestinationInfo() # DestinationInfo | Object containing type and properties of a destination (optional)
 
 try:
-    # Retrieves general information about the configuration required for all supported destination types. 
-    api_response = api_instance.api_get_destination_types()
-    pprint(api_response)
+    # Creates a new destination. Only a single destination is supported per Stitch client account. 
+    api_instance.create_destination(destination_info=destination_info)
 except ApiException as e:
-    print("Exception when calling DestinationTypesApi->api_get_destination_types: %s\n" % e)
+    print("Exception when calling DestinationsApi->create_destination: %s\n" % e)
 
 ```
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.stitchdata.com*
+All URIs are relative to *https://stitchdata.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DestinationTypesApi* | [**api_get_destination_types**](docs/DestinationTypesApi.md#api_get_destination_types) | **GET** /v4/destination-types | Retrieves general information about the configuration required for all supported destination types. 
-*DestinationsApi* | [**api_create_destination**](docs/DestinationsApi.md#api_create_destination) | **POST** /v4/destinations | Creates a new destination. Only a single destination is supported per Stitch client account. 
-*DestinationsApi* | [**api_delete_destination**](docs/DestinationsApi.md#api_delete_destination) | **DELETE** /v4/destinations/{destination_id} | Deletes an existing destination. Note: Stitch requires a destination to replicate data. Replication will be paused until a new destination is created and has a successful connection. 
-*DestinationsApi* | [**api_get_destinations**](docs/DestinationsApi.md#api_get_destinations) | **GET** /v4/destinations | Lists the destination currently in use for a Stitch account. Only a single data warehouse is supported per Stitch client account. 
-*DestinationsApi* | [**api_update_destination**](docs/DestinationsApi.md#api_update_destination) | **PUT** /v4/destinations/{destination_id} | Updates an existing destination. Modifications to the type attribute are not supported. 
-*SourcesApi* | [**api_create_source**](docs/SourcesApi.md#api_create_source) | **POST** /v4/sources | Creates a source object, which is the first step in setting up a new data source. After the source object is created, additional configuration steps must be completed. 
-*SourcesApi* | [**api_get_last_connection_check**](docs/SourcesApi.md#api_get_last_connection_check) | **GET** /v4/sources/{source_id}/last-connection-check | Retrieves the last connection check for a source by the source’s unique identifier. 
-*SourcesApi* | [**api_get_sources**](docs/SourcesApi.md#api_get_sources) | **GET** /v4/sources | Lists the sources for an account, including active, paused, and deleted sources. 
-*SourcesApi* | [**api_start_replication**](docs/SourcesApi.md#api_start_replication) | **POST** /v4/sources/{source_id}/sync | Manually starts a replication job for a source using the source’s unique identifier. 
+*DestinationsApi* | [**create_destination**](docs/DestinationsApi.md#create_destination) | **POST** /v4/destinations | Creates a new destination. Only a single destination is supported per Stitch client account. 
+*DestinationsApi* | [**delete_destination**](docs/DestinationsApi.md#delete_destination) | **DELETE** /v4/destinations/{destination_id} | Deletes an existing destination. Note: Stitch requires a destination to replicate data. Replication will be paused until a new destination is created and has a successful connection. 
+*DestinationsApi* | [**get_destination_types**](docs/DestinationsApi.md#get_destination_types) | **GET** /v4/destination-types | Retrieves general information about the configuration required for all supported destination types. 
+*DestinationsApi* | [**get_destinations**](docs/DestinationsApi.md#get_destinations) | **GET** /v4/destinations | Lists the destination currently in use for a Stitch account. Only a single data warehouse is supported per Stitch client account. 
+*DestinationsApi* | [**update_destination**](docs/DestinationsApi.md#update_destination) | **PUT** /v4/destinations/{destination_id} | Updates an existing destination. Modifications to the type attribute are not supported. 
+*SourcesApi* | [**create_source**](docs/SourcesApi.md#create_source) | **POST** /v4/sources | Creates a source object, which is the first step in setting up a new data source. After the source object is created, additional configuration steps must be completed. 
+*SourcesApi* | [**delete_source**](docs/SourcesApi.md#delete_source) | **DELETE** /v4/sources/{source_id} | Deletes an existing data source.
+*SourcesApi* | [**get_last_connection_check**](docs/SourcesApi.md#get_last_connection_check) | **GET** /v4/sources/{source_id}/last-connection-check | Retrieves the last connection check for a source by the source’s unique identifier. 
+*SourcesApi* | [**get_source**](docs/SourcesApi.md#get_source) | **GET** /v4/sources/{source_id} | Retrieves a previously created data source by its unique identifier. This endpoint can be used to retrieve an active, paused, or deleted source. 
+*SourcesApi* | [**get_sources**](docs/SourcesApi.md#get_sources) | **GET** /v4/sources | Lists the sources for an account, including active, paused, and deleted sources. 
+*SourcesApi* | [**start_replication**](docs/SourcesApi.md#start_replication) | **POST** /v4/sources/{source_id}/sync | Manually starts a replication job for a source using the source’s unique identifier. 
+*SourcesApi* | [**update_source**](docs/SourcesApi.md#update_source) | **PUT** /v4/sources/{source_id} | Updates an existing data source.
+*StreamsApi* | [**get_stream_schema**](docs/StreamsApi.md#get_stream_schema) | **GET** /v4/sources/{source_id}/streams/{stream_id} | Retrieves the schema for a source’s stream by the source and stream’s unique identifiers. 
+*StreamsApi* | [**get_streams**](docs/StreamsApi.md#get_streams) | **GET** /v4/sources/{source_id}/streams | Lists the available streams for a source.
+*StreamsApi* | [**update_stream_metadata**](docs/StreamsApi.md#update_stream_metadata) | **PUT** /v4/sources/{source_id}/streams/metadata | Updates the metadata for streams and fields. This endpoint is used to define the metadata properties returned in the Stream Schema object’s non-discoverable-metadata-keys property. 
 
 
 ## Documentation For Models
@@ -95,21 +101,27 @@ Class | Method | HTTP request | Description
  - [ConnectionStepProps](docs/ConnectionStepProps.md)
  - [ConnectionStepPropsAnyOf](docs/ConnectionStepPropsAnyOf.md)
  - [ConnectionStepPropsJsonSchema](docs/ConnectionStepPropsJsonSchema.md)
+ - [CreateSourceBody](docs/CreateSourceBody.md)
  - [Destination](docs/Destination.md)
  - [DestinationFormProperties](docs/DestinationFormProperties.md)
  - [DestinationInfo](docs/DestinationInfo.md)
  - [DestinationReportCard](docs/DestinationReportCard.md)
  - [ErrorObject](docs/ErrorObject.md)
  - [ErrorObjectError](docs/ErrorObjectError.md)
+ - [FieldLevelMetadata](docs/FieldLevelMetadata.md)
  - [HookNotification](docs/HookNotification.md)
  - [HookNotificationConfig](docs/HookNotificationConfig.md)
- - [InlineObject](docs/InlineObject.md)
+ - [Metadata](docs/Metadata.md)
  - [ReplicationJob](docs/ReplicationJob.md)
  - [S3DestinationFormProperties](docs/S3DestinationFormProperties.md)
  - [SalesforceSourceFormProperties](docs/SalesforceSourceFormProperties.md)
  - [Source](docs/Source.md)
  - [SourceFormProperties](docs/SourceFormProperties.md)
  - [SourceReportCard](docs/SourceReportCard.md)
+ - [Stream](docs/Stream.md)
+ - [StreamLevelMetadata](docs/StreamLevelMetadata.md)
+ - [StreamSchema](docs/StreamSchema.md)
+ - [UpdateSourceBody](docs/UpdateSourceBody.md)
 
 
 ## Documentation For Authorization
