@@ -52,10 +52,8 @@ class Metadata(object):
         self._metadata = None
         self.discriminator = None
 
-        if breadcrumbs is not None:
-            self.breadcrumbs = breadcrumbs
-        if metadata is not None:
-            self.metadata = metadata
+        self.breadcrumbs = breadcrumbs
+        self.metadata = metadata
 
     @property
     def breadcrumbs(self):
@@ -77,6 +75,8 @@ class Metadata(object):
         :param breadcrumbs: The breadcrumbs of this Metadata.  # noqa: E501
         :type: list[str]
         """
+        if self.local_vars_configuration.client_side_validation and breadcrumbs is None:  # noqa: E501
+            raise ValueError("Invalid value for `breadcrumbs`, must not be `None`")  # noqa: E501
 
         self._breadcrumbs = breadcrumbs
 
@@ -100,6 +100,8 @@ class Metadata(object):
         :param metadata: The metadata of this Metadata.  # noqa: E501
         :type: OneOfstreamLevelMetadatafieldLevelMetadata
         """
+        if self.local_vars_configuration.client_side_validation and metadata is None:  # noqa: E501
+            raise ValueError("Invalid value for `metadata`, must not be `None`")  # noqa: E501
 
         self._metadata = metadata
 

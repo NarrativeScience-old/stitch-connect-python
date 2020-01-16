@@ -45,7 +45,7 @@ class DestinationsApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param DestinationInfo destination_info: Object containing type and properties of a destination
+        :param CreateDestinationBody create_destination_body: Object containing type and properties of a destination
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -69,7 +69,7 @@ class DestinationsApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param DestinationInfo destination_info: Object containing type and properties of a destination
+        :param CreateDestinationBody create_destination_body: Object containing type and properties of a destination
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -86,7 +86,7 @@ class DestinationsApi(object):
 
         local_var_params = locals()
 
-        all_params = ['destination_info']  # noqa: E501
+        all_params = ['create_destination_body']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -113,8 +113,8 @@ class DestinationsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'destination_info' in local_var_params:
-            body_params = local_var_params['destination_info']
+        if 'create_destination_body' in local_var_params:
+            body_params = local_var_params['create_destination_body']
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
             ['application/json'])  # noqa: E501

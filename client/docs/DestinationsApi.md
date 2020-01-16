@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **create_destination**
-> create_destination(destination_info=destination_info)
+> create_destination(create_destination_body=create_destination_body)
 
 Creates a new destination. Only a single destination is supported per Stitch client account. 
 
@@ -33,11 +33,11 @@ configuration.access_token = 'YOUR_BEARER_TOKEN'
 configuration.host = "https://api.stitchdata.com"
 # Create an instance of the API class
 api_instance = stitch_connect_client.DestinationsApi(stitch_connect_client.ApiClient(configuration))
-destination_info = stitch_connect_client.DestinationInfo() # DestinationInfo | Object containing type and properties of a destination (optional)
+create_destination_body = stitch_connect_client.CreateDestinationBody() # CreateDestinationBody | Object containing type and properties of a destination (optional)
 
 try:
     # Creates a new destination. Only a single destination is supported per Stitch client account. 
-    api_instance.create_destination(destination_info=destination_info)
+    api_instance.create_destination(create_destination_body=create_destination_body)
 except ApiException as e:
     print("Exception when calling DestinationsApi->create_destination: %s\n" % e)
 ```
@@ -46,7 +46,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **destination_info** | [**DestinationInfo**](DestinationInfo.md)| Object containing type and properties of a destination | [optional] 
+ **create_destination_body** | [**CreateDestinationBody**](CreateDestinationBody.md)| Object containing type and properties of a destination | [optional] 
 
 ### Return type
 
