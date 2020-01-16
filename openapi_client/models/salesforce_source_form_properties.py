@@ -36,17 +36,27 @@ class SalesforceSourceFormProperties(object):
         'anchor_time': 'str',
         'api_type': 'str',
         'cron_expression': 'str',
-        'frequency_in_minutes': 'str'
+        'frequency_in_minutes': 'str',
+        'is_sandbox': 'str',
+        'quota_percent_per_run': 'str',
+        'quota_percent_total': 'str',
+        'select_fields_by_default': 'str',
+        'start_date': 'str'
     }
 
     attribute_map = {
         'anchor_time': 'anchor_time',
         'api_type': 'api_type',
         'cron_expression': 'cron_expression',
-        'frequency_in_minutes': 'frequency_in_minutes'
+        'frequency_in_minutes': 'frequency_in_minutes',
+        'is_sandbox': 'is_sandbox',
+        'quota_percent_per_run': 'quota_percent_per_run',
+        'quota_percent_total': 'quota_percent_total',
+        'select_fields_by_default': 'select_fields_by_default',
+        'start_date': 'start_date'
     }
 
-    def __init__(self, anchor_time=None, api_type=None, cron_expression=None, frequency_in_minutes=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, anchor_time=None, api_type=None, cron_expression=None, frequency_in_minutes=None, is_sandbox=None, quota_percent_per_run=None, quota_percent_total=None, select_fields_by_default=None, start_date=None, local_vars_configuration=None):  # noqa: E501
         """SalesforceSourceFormProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -56,16 +66,27 @@ class SalesforceSourceFormProperties(object):
         self._api_type = None
         self._cron_expression = None
         self._frequency_in_minutes = None
+        self._is_sandbox = None
+        self._quota_percent_per_run = None
+        self._quota_percent_total = None
+        self._select_fields_by_default = None
+        self._start_date = None
         self.discriminator = None
 
         if anchor_time is not None:
             self.anchor_time = anchor_time
-        if api_type is not None:
-            self.api_type = api_type
+        self.api_type = api_type
         if cron_expression is not None:
             self.cron_expression = cron_expression
-        if frequency_in_minutes is not None:
-            self.frequency_in_minutes = frequency_in_minutes
+        self.frequency_in_minutes = frequency_in_minutes
+        if is_sandbox is not None:
+            self.is_sandbox = is_sandbox
+        if quota_percent_per_run is not None:
+            self.quota_percent_per_run = quota_percent_per_run
+        if quota_percent_total is not None:
+            self.quota_percent_total = quota_percent_total
+        self.select_fields_by_default = select_fields_by_default
+        self.start_date = start_date
 
     @property
     def anchor_time(self):
@@ -110,6 +131,8 @@ class SalesforceSourceFormProperties(object):
         :param api_type: The api_type of this SalesforceSourceFormProperties.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and api_type is None:  # noqa: E501
+            raise ValueError("Invalid value for `api_type`, must not be `None`")  # noqa: E501
 
         self._api_type = api_type
 
@@ -156,6 +179,8 @@ class SalesforceSourceFormProperties(object):
         :param frequency_in_minutes: The frequency_in_minutes of this SalesforceSourceFormProperties.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and frequency_in_minutes is None:  # noqa: E501
+            raise ValueError("Invalid value for `frequency_in_minutes`, must not be `None`")  # noqa: E501
         allowed_values = ["30", "60", "360", "720", "1440"]  # noqa: E501
         if self.local_vars_configuration.client_side_validation and frequency_in_minutes not in allowed_values:  # noqa: E501
             raise ValueError(
@@ -164,6 +189,125 @@ class SalesforceSourceFormProperties(object):
             )
 
         self._frequency_in_minutes = frequency_in_minutes
+
+    @property
+    def is_sandbox(self):
+        """Gets the is_sandbox of this SalesforceSourceFormProperties.  # noqa: E501
+
+        If `true`, the Salesforce account being connected is a sandbox.  # noqa: E501
+
+        :return: The is_sandbox of this SalesforceSourceFormProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_sandbox
+
+    @is_sandbox.setter
+    def is_sandbox(self, is_sandbox):
+        """Sets the is_sandbox of this SalesforceSourceFormProperties.
+
+        If `true`, the Salesforce account being connected is a sandbox.  # noqa: E501
+
+        :param is_sandbox: The is_sandbox of this SalesforceSourceFormProperties.  # noqa: E501
+        :type: str
+        """
+
+        self._is_sandbox = is_sandbox
+
+    @property
+    def quota_percent_per_run(self):
+        """Gets the quota_percent_per_run of this SalesforceSourceFormProperties.  # noqa: E501
+
+        The maximum percentage of Salesforce API quota allowed per replication job.   # noqa: E501
+
+        :return: The quota_percent_per_run of this SalesforceSourceFormProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._quota_percent_per_run
+
+    @quota_percent_per_run.setter
+    def quota_percent_per_run(self, quota_percent_per_run):
+        """Sets the quota_percent_per_run of this SalesforceSourceFormProperties.
+
+        The maximum percentage of Salesforce API quota allowed per replication job.   # noqa: E501
+
+        :param quota_percent_per_run: The quota_percent_per_run of this SalesforceSourceFormProperties.  # noqa: E501
+        :type: str
+        """
+
+        self._quota_percent_per_run = quota_percent_per_run
+
+    @property
+    def quota_percent_total(self):
+        """Gets the quota_percent_total of this SalesforceSourceFormProperties.  # noqa: E501
+
+        The maximum percentage of Salesforce API quota allowed per day.   # noqa: E501
+
+        :return: The quota_percent_total of this SalesforceSourceFormProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._quota_percent_total
+
+    @quota_percent_total.setter
+    def quota_percent_total(self, quota_percent_total):
+        """Sets the quota_percent_total of this SalesforceSourceFormProperties.
+
+        The maximum percentage of Salesforce API quota allowed per day.   # noqa: E501
+
+        :param quota_percent_total: The quota_percent_total of this SalesforceSourceFormProperties.  # noqa: E501
+        :type: str
+        """
+
+        self._quota_percent_total = quota_percent_total
+
+    @property
+    def select_fields_by_default(self):
+        """Gets the select_fields_by_default of this SalesforceSourceFormProperties.  # noqa: E501
+
+        If `true`, Stitch will automatically set new fields added in Salesforce to replicate.   # noqa: E501
+
+        :return: The select_fields_by_default of this SalesforceSourceFormProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._select_fields_by_default
+
+    @select_fields_by_default.setter
+    def select_fields_by_default(self, select_fields_by_default):
+        """Sets the select_fields_by_default of this SalesforceSourceFormProperties.
+
+        If `true`, Stitch will automatically set new fields added in Salesforce to replicate.   # noqa: E501
+
+        :param select_fields_by_default: The select_fields_by_default of this SalesforceSourceFormProperties.  # noqa: E501
+        :type: str
+        """
+        if self.local_vars_configuration.client_side_validation and select_fields_by_default is None:  # noqa: E501
+            raise ValueError("Invalid value for `select_fields_by_default`, must not be `None`")  # noqa: E501
+
+        self._select_fields_by_default = select_fields_by_default
+
+    @property
+    def start_date(self):
+        """Gets the start_date of this SalesforceSourceFormProperties.  # noqa: E501
+
+        The date from which Stitch should begin replicating data from Salesforce. Data from this date forward will be replicated. This field must contain an ISO 8601-compliant date, and the timestamp must be midnight. For example: 2018-01-01T00:00:00Z   # noqa: E501
+
+        :return: The start_date of this SalesforceSourceFormProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._start_date
+
+    @start_date.setter
+    def start_date(self, start_date):
+        """Sets the start_date of this SalesforceSourceFormProperties.
+
+        The date from which Stitch should begin replicating data from Salesforce. Data from this date forward will be replicated. This field must contain an ISO 8601-compliant date, and the timestamp must be midnight. For example: 2018-01-01T00:00:00Z   # noqa: E501
+
+        :param start_date: The start_date of this SalesforceSourceFormProperties.  # noqa: E501
+        :type: str
+        """
+        if self.local_vars_configuration.client_side_validation and start_date is None:  # noqa: E501
+            raise ValueError("Invalid value for `start_date`, must not be `None`")  # noqa: E501
+
+        self._start_date = start_date
 
     def to_dict(self):
         """Returns the model properties as a dict"""
