@@ -116,7 +116,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_stream_metadata**
-> update_stream_metadata(source_id, stream=stream)
+> update_stream_metadata(source_id, stream)
 
 Updates the metadata for streams and fields. This endpoint is used to define the metadata properties returned in the Stream Schema object’s non-discoverable-metadata-keys property. 
 
@@ -138,11 +138,11 @@ configuration.host = "https://api.stitchdata.com"
 # Create an instance of the API class
 api_instance = stitch_connect_client.StreamsApi(stitch_connect_client.ApiClient(configuration))
 source_id = 'source_id_example' # str | The ID of the source
-stream = [stitch_connect_client.Stream()] # list[Stream] | Array of streams to update metadata for (optional)
+stream = [stitch_connect_client.Stream()] # list[Stream] | Array of streams to update metadata for
 
 try:
     # Updates the metadata for streams and fields. This endpoint is used to define the metadata properties returned in the Stream Schema object’s non-discoverable-metadata-keys property. 
-    api_instance.update_stream_metadata(source_id, stream=stream)
+    api_instance.update_stream_metadata(source_id, stream)
 except ApiException as e:
     print("Exception when calling StreamsApi->update_stream_metadata: %s\n" % e)
 ```
@@ -152,7 +152,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **source_id** | **str**| The ID of the source | 
- **stream** | [**list[Stream]**](Stream.md)| Array of streams to update metadata for | [optional] 
+ **stream** | [**list[Stream]**](Stream.md)| Array of streams to update metadata for | 
 
 ### Return type
 

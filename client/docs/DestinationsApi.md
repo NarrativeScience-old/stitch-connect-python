@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **create_destination**
-> create_destination(create_destination_body=create_destination_body)
+> create_destination(create_destination_body)
 
 Creates a new destination. Only a single destination is supported per Stitch client account. 
 
@@ -33,11 +33,11 @@ configuration.access_token = 'YOUR_BEARER_TOKEN'
 configuration.host = "https://api.stitchdata.com"
 # Create an instance of the API class
 api_instance = stitch_connect_client.DestinationsApi(stitch_connect_client.ApiClient(configuration))
-create_destination_body = stitch_connect_client.CreateDestinationBody() # CreateDestinationBody | Object containing type and properties of a destination (optional)
+create_destination_body = stitch_connect_client.CreateDestinationBody() # CreateDestinationBody | Object containing type and properties of a destination
 
 try:
     # Creates a new destination. Only a single destination is supported per Stitch client account. 
-    api_instance.create_destination(create_destination_body=create_destination_body)
+    api_instance.create_destination(create_destination_body)
 except ApiException as e:
     print("Exception when calling DestinationsApi->create_destination: %s\n" % e)
 ```
@@ -46,7 +46,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_destination_body** | [**CreateDestinationBody**](CreateDestinationBody.md)| Object containing type and properties of a destination | [optional] 
+ **create_destination_body** | [**CreateDestinationBody**](CreateDestinationBody.md)| Object containing type and properties of a destination | 
 
 ### Return type
 
@@ -236,7 +236,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_destination**
-> update_destination(destination_id, destination_form_properties=destination_form_properties)
+> update_destination(destination_id, destination_form_properties)
 
 Updates an existing destination. Modifications to the type attribute are not supported. 
 
@@ -252,11 +252,11 @@ from pprint import pprint
 # Create an instance of the API class
 api_instance = stitch_connect_client.DestinationsApi()
 destination_id = 'destination_id_example' # str | The ID of the destination
-destination_form_properties = stitch_connect_client.DestinationFormProperties() # DestinationFormProperties | Object containing properties info (optional)
+destination_form_properties = stitch_connect_client.DestinationFormProperties() # DestinationFormProperties | Object containing properties info
 
 try:
     # Updates an existing destination. Modifications to the type attribute are not supported. 
-    api_instance.update_destination(destination_id, destination_form_properties=destination_form_properties)
+    api_instance.update_destination(destination_id, destination_form_properties)
 except ApiException as e:
     print("Exception when calling DestinationsApi->update_destination: %s\n" % e)
 ```
@@ -266,7 +266,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **destination_id** | **str**| The ID of the destination | 
- **destination_form_properties** | [**DestinationFormProperties**](DestinationFormProperties.md)| Object containing properties info | [optional] 
+ **destination_form_properties** | [**DestinationFormProperties**](DestinationFormProperties.md)| Object containing properties info | 
 
 ### Return type
 

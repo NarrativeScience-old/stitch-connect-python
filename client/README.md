@@ -59,11 +59,11 @@ configuration.access_token = 'YOUR_BEARER_TOKEN'
 configuration.host = "https://api.stitchdata.com"
 # Create an instance of the API class
 api_instance = stitch_connect_client.DestinationsApi(stitch_connect_client.ApiClient(configuration))
-create_destination_body = stitch_connect_client.CreateDestinationBody() # CreateDestinationBody | Object containing type and properties of a destination (optional)
+create_destination_body = stitch_connect_client.CreateDestinationBody() # CreateDestinationBody | Object containing type and properties of a destination
 
 try:
     # Creates a new destination. Only a single destination is supported per Stitch client account. 
-    api_instance.create_destination(create_destination_body=create_destination_body)
+    api_instance.create_destination(create_destination_body)
 except ApiException as e:
     print("Exception when calling DestinationsApi->create_destination: %s\n" % e)
 

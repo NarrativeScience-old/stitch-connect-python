@@ -36,16 +36,16 @@ class DestinationsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def create_destination(self, **kwargs):  # noqa: E501
+    def create_destination(self, create_destination_body, **kwargs):  # noqa: E501
         """Creates a new destination. Only a single destination is supported per Stitch client account.   # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_destination(async_req=True)
+        >>> thread = api.create_destination(create_destination_body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param CreateDestinationBody create_destination_body: Object containing type and properties of a destination
+        :param CreateDestinationBody create_destination_body: Object containing type and properties of a destination (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -58,18 +58,18 @@ class DestinationsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.create_destination_with_http_info(**kwargs)  # noqa: E501
+        return self.create_destination_with_http_info(create_destination_body, **kwargs)  # noqa: E501
 
-    def create_destination_with_http_info(self, **kwargs):  # noqa: E501
+    def create_destination_with_http_info(self, create_destination_body, **kwargs):  # noqa: E501
         """Creates a new destination. Only a single destination is supported per Stitch client account.   # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_destination_with_http_info(async_req=True)
+        >>> thread = api.create_destination_with_http_info(create_destination_body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param CreateDestinationBody create_destination_body: Object containing type and properties of a destination
+        :param CreateDestinationBody create_destination_body: Object containing type and properties of a destination (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -100,6 +100,10 @@ class DestinationsApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'create_destination_body' is set
+        if self.api_client.client_side_validation and ('create_destination_body' not in local_var_params or  # noqa: E501
+                                                        local_var_params['create_destination_body'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `create_destination_body` when calling `create_destination`")  # noqa: E501
 
         collection_formats = {}
 
@@ -436,17 +440,17 @@ class DestinationsApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_destination(self, destination_id, **kwargs):  # noqa: E501
+    def update_destination(self, destination_id, destination_form_properties, **kwargs):  # noqa: E501
         """Updates an existing destination. Modifications to the type attribute are not supported.   # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_destination(destination_id, async_req=True)
+        >>> thread = api.update_destination(destination_id, destination_form_properties, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str destination_id: The ID of the destination (required)
-        :param DestinationFormProperties destination_form_properties: Object containing properties info
+        :param DestinationFormProperties destination_form_properties: Object containing properties info (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -459,19 +463,19 @@ class DestinationsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.update_destination_with_http_info(destination_id, **kwargs)  # noqa: E501
+        return self.update_destination_with_http_info(destination_id, destination_form_properties, **kwargs)  # noqa: E501
 
-    def update_destination_with_http_info(self, destination_id, **kwargs):  # noqa: E501
+    def update_destination_with_http_info(self, destination_id, destination_form_properties, **kwargs):  # noqa: E501
         """Updates an existing destination. Modifications to the type attribute are not supported.   # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_destination_with_http_info(destination_id, async_req=True)
+        >>> thread = api.update_destination_with_http_info(destination_id, destination_form_properties, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str destination_id: The ID of the destination (required)
-        :param DestinationFormProperties destination_form_properties: Object containing properties info
+        :param DestinationFormProperties destination_form_properties: Object containing properties info (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -506,6 +510,10 @@ class DestinationsApi(object):
         if self.api_client.client_side_validation and ('destination_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['destination_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `destination_id` when calling `update_destination`")  # noqa: E501
+        # verify the required parameter 'destination_form_properties' is set
+        if self.api_client.client_side_validation and ('destination_form_properties' not in local_var_params or  # noqa: E501
+                                                        local_var_params['destination_form_properties'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `destination_form_properties` when calling `update_destination`")  # noqa: E501
 
         collection_formats = {}
 

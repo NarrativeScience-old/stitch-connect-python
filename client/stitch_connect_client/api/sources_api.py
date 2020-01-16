@@ -36,16 +36,16 @@ class SourcesApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def create_source(self, **kwargs):  # noqa: E501
+    def create_source(self, create_source_body, **kwargs):  # noqa: E501
         """Creates a source object, which is the first step in setting up a new data source. After the source object is created, additional configuration steps must be completed.   # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_source(async_req=True)
+        >>> thread = api.create_source(create_source_body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param CreateSourceBody create_source_body: Request body to create a new source
+        :param CreateSourceBody create_source_body: Request body to create a new source (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -58,18 +58,18 @@ class SourcesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.create_source_with_http_info(**kwargs)  # noqa: E501
+        return self.create_source_with_http_info(create_source_body, **kwargs)  # noqa: E501
 
-    def create_source_with_http_info(self, **kwargs):  # noqa: E501
+    def create_source_with_http_info(self, create_source_body, **kwargs):  # noqa: E501
         """Creates a source object, which is the first step in setting up a new data source. After the source object is created, additional configuration steps must be completed.   # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_source_with_http_info(async_req=True)
+        >>> thread = api.create_source_with_http_info(create_source_body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param CreateSourceBody create_source_body: Request body to create a new source
+        :param CreateSourceBody create_source_body: Request body to create a new source (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -100,6 +100,10 @@ class SourcesApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'create_source_body' is set
+        if self.api_client.client_side_validation and ('create_source_body' not in local_var_params or  # noqa: E501
+                                                        local_var_params['create_source_body'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `create_source_body` when calling `create_source`")  # noqa: E501
 
         collection_formats = {}
 
@@ -656,17 +660,17 @@ class SourcesApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_source(self, source_id, **kwargs):  # noqa: E501
+    def update_source(self, source_id, update_source_body, **kwargs):  # noqa: E501
         """Updates an existing data source.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_source(source_id, async_req=True)
+        >>> thread = api.update_source(source_id, update_source_body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str source_id: The ID of the source (required)
-        :param UpdateSourceBody update_source_body: Request body for updating a source
+        :param UpdateSourceBody update_source_body: Request body for updating a source (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -679,19 +683,19 @@ class SourcesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.update_source_with_http_info(source_id, **kwargs)  # noqa: E501
+        return self.update_source_with_http_info(source_id, update_source_body, **kwargs)  # noqa: E501
 
-    def update_source_with_http_info(self, source_id, **kwargs):  # noqa: E501
+    def update_source_with_http_info(self, source_id, update_source_body, **kwargs):  # noqa: E501
         """Updates an existing data source.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_source_with_http_info(source_id, async_req=True)
+        >>> thread = api.update_source_with_http_info(source_id, update_source_body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str source_id: The ID of the source (required)
-        :param UpdateSourceBody update_source_body: Request body for updating a source
+        :param UpdateSourceBody update_source_body: Request body for updating a source (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -726,6 +730,10 @@ class SourcesApi(object):
         if self.api_client.client_side_validation and ('source_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['source_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `source_id` when calling `update_source`")  # noqa: E501
+        # verify the required parameter 'update_source_body' is set
+        if self.api_client.client_side_validation and ('update_source_body' not in local_var_params or  # noqa: E501
+                                                        local_var_params['update_source_body'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `update_source_body` when calling `update_source`")  # noqa: E501
 
         collection_formats = {}
 

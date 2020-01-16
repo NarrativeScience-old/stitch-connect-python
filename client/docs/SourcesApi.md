@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **create_source**
-> Source create_source(create_source_body=create_source_body)
+> Source create_source(create_source_body)
 
 Creates a source object, which is the first step in setting up a new data source. After the source object is created, additional configuration steps must be completed. 
 
@@ -35,11 +35,11 @@ configuration.access_token = 'YOUR_BEARER_TOKEN'
 configuration.host = "https://api.stitchdata.com"
 # Create an instance of the API class
 api_instance = stitch_connect_client.SourcesApi(stitch_connect_client.ApiClient(configuration))
-create_source_body = stitch_connect_client.CreateSourceBody() # CreateSourceBody | Request body to create a new source (optional)
+create_source_body = stitch_connect_client.CreateSourceBody() # CreateSourceBody | Request body to create a new source
 
 try:
     # Creates a source object, which is the first step in setting up a new data source. After the source object is created, additional configuration steps must be completed. 
-    api_response = api_instance.create_source(create_source_body=create_source_body)
+    api_response = api_instance.create_source(create_source_body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SourcesApi->create_source: %s\n" % e)
@@ -49,7 +49,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_source_body** | [**CreateSourceBody**](CreateSourceBody.md)| Request body to create a new source | [optional] 
+ **create_source_body** | [**CreateSourceBody**](CreateSourceBody.md)| Request body to create a new source | 
 
 ### Return type
 
@@ -352,7 +352,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_source**
-> update_source(source_id, update_source_body=update_source_body)
+> update_source(source_id, update_source_body)
 
 Updates an existing data source.
 
@@ -368,11 +368,11 @@ from pprint import pprint
 # Create an instance of the API class
 api_instance = stitch_connect_client.SourcesApi()
 source_id = 'source_id_example' # str | The ID of the source
-update_source_body = stitch_connect_client.UpdateSourceBody() # UpdateSourceBody | Request body for updating a source (optional)
+update_source_body = stitch_connect_client.UpdateSourceBody() # UpdateSourceBody | Request body for updating a source
 
 try:
     # Updates an existing data source.
-    api_instance.update_source(source_id, update_source_body=update_source_body)
+    api_instance.update_source(source_id, update_source_body)
 except ApiException as e:
     print("Exception when calling SourcesApi->update_source: %s\n" % e)
 ```
@@ -382,7 +382,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **source_id** | **str**| The ID of the source | 
- **update_source_body** | [**UpdateSourceBody**](UpdateSourceBody.md)| Request body for updating a source | [optional] 
+ **update_source_body** | [**UpdateSourceBody**](UpdateSourceBody.md)| Request body for updating a source | 
 
 ### Return type
 

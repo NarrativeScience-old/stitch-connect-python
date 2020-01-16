@@ -252,17 +252,17 @@ class StreamsApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_stream_metadata(self, source_id, **kwargs):  # noqa: E501
+    def update_stream_metadata(self, source_id, stream, **kwargs):  # noqa: E501
         """Updates the metadata for streams and fields. This endpoint is used to define the metadata properties returned in the Stream Schema object’s non-discoverable-metadata-keys property.   # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_stream_metadata(source_id, async_req=True)
+        >>> thread = api.update_stream_metadata(source_id, stream, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str source_id: The ID of the source (required)
-        :param list[Stream] stream: Array of streams to update metadata for
+        :param list[Stream] stream: Array of streams to update metadata for (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -275,19 +275,19 @@ class StreamsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.update_stream_metadata_with_http_info(source_id, **kwargs)  # noqa: E501
+        return self.update_stream_metadata_with_http_info(source_id, stream, **kwargs)  # noqa: E501
 
-    def update_stream_metadata_with_http_info(self, source_id, **kwargs):  # noqa: E501
+    def update_stream_metadata_with_http_info(self, source_id, stream, **kwargs):  # noqa: E501
         """Updates the metadata for streams and fields. This endpoint is used to define the metadata properties returned in the Stream Schema object’s non-discoverable-metadata-keys property.   # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_stream_metadata_with_http_info(source_id, async_req=True)
+        >>> thread = api.update_stream_metadata_with_http_info(source_id, stream, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str source_id: The ID of the source (required)
-        :param list[Stream] stream: Array of streams to update metadata for
+        :param list[Stream] stream: Array of streams to update metadata for (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -322,6 +322,10 @@ class StreamsApi(object):
         if self.api_client.client_side_validation and ('source_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['source_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `source_id` when calling `update_stream_metadata`")  # noqa: E501
+        # verify the required parameter 'stream' is set
+        if self.api_client.client_side_validation and ('stream' not in local_var_params or  # noqa: E501
+                                                        local_var_params['stream'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `stream` when calling `update_stream_metadata`")  # noqa: E501
 
         collection_formats = {}
 
