@@ -242,15 +242,21 @@ Updates an existing destination. Modifications to the type attribute are not sup
 
 ### Example
 
+* Bearer Authentication (bearerAuth):
 ```python
 from __future__ import print_function
 import time
 import stitch_connect_client
 from stitch_connect_client.rest import ApiException
 from pprint import pprint
+configuration = stitch_connect_client.Configuration()
+# Configure Bearer authorization: bearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
 
+# Defining host is optional and default to https://api.stitchdata.com
+configuration.host = "https://api.stitchdata.com"
 # Create an instance of the API class
-api_instance = stitch_connect_client.DestinationsApi()
+api_instance = stitch_connect_client.DestinationsApi(stitch_connect_client.ApiClient(configuration))
 destination_id = 'destination_id_example' # str | The ID of the destination
 destination_form_properties = stitch_connect_client.DestinationFormProperties() # DestinationFormProperties | Object containing properties info
 
@@ -274,7 +280,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

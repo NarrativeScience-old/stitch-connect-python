@@ -79,15 +79,21 @@ Deletes an existing data source.
 
 ### Example
 
+* Bearer Authentication (bearerAuth):
 ```python
 from __future__ import print_function
 import time
 import stitch_connect_client
 from stitch_connect_client.rest import ApiException
 from pprint import pprint
+configuration = stitch_connect_client.Configuration()
+# Configure Bearer authorization: bearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
 
+# Defining host is optional and default to https://api.stitchdata.com
+configuration.host = "https://api.stitchdata.com"
 # Create an instance of the API class
-api_instance = stitch_connect_client.SourcesApi()
+api_instance = stitch_connect_client.SourcesApi(stitch_connect_client.ApiClient(configuration))
 source_id = 'source_id_example' # str | The ID of the source
 
 try:
@@ -109,7 +115,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -358,15 +364,21 @@ Updates an existing data source.
 
 ### Example
 
+* Bearer Authentication (bearerAuth):
 ```python
 from __future__ import print_function
 import time
 import stitch_connect_client
 from stitch_connect_client.rest import ApiException
 from pprint import pprint
+configuration = stitch_connect_client.Configuration()
+# Configure Bearer authorization: bearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
 
+# Defining host is optional and default to https://api.stitchdata.com
+configuration.host = "https://api.stitchdata.com"
 # Create an instance of the API class
-api_instance = stitch_connect_client.SourcesApi()
+api_instance = stitch_connect_client.SourcesApi(stitch_connect_client.ApiClient(configuration))
 source_id = 'source_id_example' # str | The ID of the source
 update_source_body = stitch_connect_client.UpdateSourceBody() # UpdateSourceBody | Request body for updating a source
 
@@ -390,7 +402,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

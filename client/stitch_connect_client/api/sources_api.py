@@ -230,7 +230,7 @@ class SourcesApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/v4/sources/{source_id}', 'DELETE',
@@ -756,7 +756,7 @@ class SourcesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/v4/sources/{source_id}', 'PUT',
