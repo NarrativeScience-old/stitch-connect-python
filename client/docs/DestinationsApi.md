@@ -1,6 +1,6 @@
 # stitch_connect_client.DestinationsApi
 
-All URIs are relative to *https://stitchdata.com*
+All URIs are relative to *https://api.stitchdata.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -29,8 +29,8 @@ configuration = stitch_connect_client.Configuration()
 # Configure Bearer authorization: bearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://stitchdata.com
-configuration.host = "https://stitchdata.com"
+# Defining host is optional and default to https://api.stitchdata.com
+configuration.host = "https://api.stitchdata.com"
 # Create an instance of the API class
 api_instance = stitch_connect_client.DestinationsApi(stitch_connect_client.ApiClient(configuration))
 destination_info = stitch_connect_client.DestinationInfo() # DestinationInfo | Object containing type and properties of a destination (optional)
@@ -87,8 +87,8 @@ configuration = stitch_connect_client.Configuration()
 # Configure Bearer authorization: bearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://stitchdata.com
-configuration.host = "https://stitchdata.com"
+# Defining host is optional and default to https://api.stitchdata.com
+configuration.host = "https://api.stitchdata.com"
 # Create an instance of the API class
 api_instance = stitch_connect_client.DestinationsApi(stitch_connect_client.ApiClient(configuration))
 destination_id = 'destination_id_example' # str | The ID of the destination
@@ -146,8 +146,8 @@ configuration = stitch_connect_client.Configuration()
 # Configure Bearer authorization: bearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://stitchdata.com
-configuration.host = "https://stitchdata.com"
+# Defining host is optional and default to https://api.stitchdata.com
+configuration.host = "https://api.stitchdata.com"
 # Create an instance of the API class
 api_instance = stitch_connect_client.DestinationsApi(stitch_connect_client.ApiClient(configuration))
 
@@ -200,8 +200,8 @@ configuration = stitch_connect_client.Configuration()
 # Configure Bearer authorization: bearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://stitchdata.com
-configuration.host = "https://stitchdata.com"
+# Defining host is optional and default to https://api.stitchdata.com
+configuration.host = "https://api.stitchdata.com"
 # Create an instance of the API class
 api_instance = stitch_connect_client.DestinationsApi(stitch_connect_client.ApiClient(configuration))
 
