@@ -34,7 +34,7 @@ class StreamLevelMetadata(object):
     """
     openapi_types = {
         'database_name': 'str',
-        'forced_replication_method': 'str',
+        'forced_replication_method': 'ForcedReplicationMethod',
         'is_view': 'bool',
         'replication_key': 'str',
         'replication_method': 'str',
@@ -129,10 +129,9 @@ class StreamLevelMetadata(object):
     def forced_replication_method(self):
         """Gets the forced_replication_method of this StreamLevelMetadata.  # noqa: E501
 
-        Indicates which Replication Method is required for the stream. Possible values are: FULL_TABLE - The stream is using Full Table Replication INCREMENTAL - The stream is using Key-based Incremental Replication LOG_BASED - The stream is using Log-based Incremental Replication.   # noqa: E501
 
         :return: The forced_replication_method of this StreamLevelMetadata.  # noqa: E501
-        :rtype: str
+        :rtype: ForcedReplicationMethod
         """
         return self._forced_replication_method
 
@@ -140,17 +139,10 @@ class StreamLevelMetadata(object):
     def forced_replication_method(self, forced_replication_method):
         """Sets the forced_replication_method of this StreamLevelMetadata.
 
-        Indicates which Replication Method is required for the stream. Possible values are: FULL_TABLE - The stream is using Full Table Replication INCREMENTAL - The stream is using Key-based Incremental Replication LOG_BASED - The stream is using Log-based Incremental Replication.   # noqa: E501
 
         :param forced_replication_method: The forced_replication_method of this StreamLevelMetadata.  # noqa: E501
-        :type: str
+        :type: ForcedReplicationMethod
         """
-        allowed_values = ["FULL_TABLE", "INCREMENTAL", "LOG_BASED"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and forced_replication_method not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `forced_replication_method` ({0}), must be one of {1}"  # noqa: E501
-                .format(forced_replication_method, allowed_values)
-            )
 
         self._forced_replication_method = forced_replication_method
 

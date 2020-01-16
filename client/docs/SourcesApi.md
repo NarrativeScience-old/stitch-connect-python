@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_source**
-> delete_source(source_id)
+> Source delete_source(source_id)
 
 Deletes an existing data source.
 
@@ -98,7 +98,8 @@ source_id = 'source_id_example' # str | The ID of the source
 
 try:
     # Deletes an existing data source.
-    api_instance.delete_source(source_id)
+    api_response = api_instance.delete_source(source_id)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling SourcesApi->delete_source: %s\n" % e)
 ```
@@ -111,7 +112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Source**](Source.md)
 
 ### Authorization
 
@@ -120,12 +121,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
+**200** | Successfully deleted data source |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -188,7 +189,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_source**
-> get_source(source_id)
+> Source get_source(source_id)
 
 Retrieves a previously created data source by its unique identifier. This endpoint can be used to retrieve an active, paused, or deleted source. 
 
@@ -213,7 +214,8 @@ source_id = 'source_id_example' # str | The ID of the source
 
 try:
     # Retrieves a previously created data source by its unique identifier. This endpoint can be used to retrieve an active, paused, or deleted source. 
-    api_instance.get_source(source_id)
+    api_response = api_instance.get_source(source_id)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling SourcesApi->get_source: %s\n" % e)
 ```
@@ -226,7 +228,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Source**](Source.md)
 
 ### Authorization
 
@@ -235,12 +237,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
+**200** | Successfully retrieved data source |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -358,7 +360,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_source**
-> update_source(source_id, update_source_body)
+> Source update_source(source_id, update_source_body)
 
 Updates an existing data source.
 
@@ -384,7 +386,8 @@ update_source_body = stitch_connect_client.UpdateSourceBody() # UpdateSourceBody
 
 try:
     # Updates an existing data source.
-    api_instance.update_source(source_id, update_source_body)
+    api_response = api_instance.update_source(source_id, update_source_body)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling SourcesApi->update_source: %s\n" % e)
 ```
@@ -398,7 +401,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Source**](Source.md)
 
 ### Authorization
 
@@ -407,12 +410,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
+**200** | Successfully updated source |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **create_destination**
-> create_destination(create_destination_body)
+> Destination create_destination(create_destination_body)
 
 Creates a new destination. Only a single destination is supported per Stitch client account. 
 
@@ -37,7 +37,8 @@ create_destination_body = stitch_connect_client.CreateDestinationBody() # Create
 
 try:
     # Creates a new destination. Only a single destination is supported per Stitch client account. 
-    api_instance.create_destination(create_destination_body)
+    api_response = api_instance.create_destination(create_destination_body)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DestinationsApi->create_destination: %s\n" % e)
 ```
@@ -50,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Destination**](Destination.md)
 
 ### Authorization
 
@@ -59,12 +60,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
+**200** | Successfully created destination |  -  |
 **400** | Only a single destination per account is allowed  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -183,7 +184,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_destinations**
-> get_destinations()
+> list[Destination] get_destinations()
 
 Lists the destination currently in use for a Stitch account. Only a single data warehouse is supported per Stitch client account. 
 
@@ -207,7 +208,8 @@ api_instance = stitch_connect_client.DestinationsApi(stitch_connect_client.ApiCl
 
 try:
     # Lists the destination currently in use for a Stitch account. Only a single data warehouse is supported per Stitch client account. 
-    api_instance.get_destinations()
+    api_response = api_instance.get_destinations()
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DestinationsApi->get_destinations: %s\n" % e)
 ```
@@ -217,7 +219,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+[**list[Destination]**](Destination.md)
 
 ### Authorization
 
@@ -231,12 +233,12 @@ void (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
+**200** | List of destination objects |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_destination**
-> update_destination(destination_id, destination_form_properties)
+> Destination update_destination(destination_id, destination_form_properties)
 
 Updates an existing destination. Modifications to the type attribute are not supported. 
 
@@ -262,7 +264,8 @@ destination_form_properties = stitch_connect_client.DestinationFormProperties() 
 
 try:
     # Updates an existing destination. Modifications to the type attribute are not supported. 
-    api_instance.update_destination(destination_id, destination_form_properties)
+    api_response = api_instance.update_destination(destination_id, destination_form_properties)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DestinationsApi->update_destination: %s\n" % e)
 ```
@@ -276,7 +279,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Destination**](Destination.md)
 
 ### Authorization
 
@@ -285,12 +288,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
+**200** | Successfully updated destination |  -  |
 **400** | Invalid destination ID  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

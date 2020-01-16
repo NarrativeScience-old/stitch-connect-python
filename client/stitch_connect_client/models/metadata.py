@@ -33,77 +33,73 @@ class Metadata(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'breadcrumbs': 'list[str]',
-        'metadata': 'OneOfstreamLevelMetadatafieldLevelMetadata'
+        'breadcrumb': 'list[str]',
+        'metadata_object': 'MetadataObject'
     }
 
     attribute_map = {
-        'breadcrumbs': 'breadcrumbs',
-        'metadata': 'metadata'
+        'breadcrumb': 'breadcrumb',
+        'metadata_object': 'metadata-object'
     }
 
-    def __init__(self, breadcrumbs=None, metadata=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, breadcrumb=None, metadata_object=None, local_vars_configuration=None):  # noqa: E501
         """Metadata - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._breadcrumbs = None
-        self._metadata = None
+        self._breadcrumb = None
+        self._metadata_object = None
         self.discriminator = None
 
-        self.breadcrumbs = breadcrumbs
-        self.metadata = metadata
+        if breadcrumb is not None:
+            self.breadcrumb = breadcrumb
+        if metadata_object is not None:
+            self.metadata_object = metadata_object
 
     @property
-    def breadcrumbs(self):
-        """Gets the breadcrumbs of this Metadata.  # noqa: E501
+    def breadcrumb(self):
+        """Gets the breadcrumb of this Metadata.  # noqa: E501
 
         An array of strings describing a path into the schema. For example: A value of [] refers to the entire schema, or stream A value of [\"properties\", \"<FIELD_NAME>\"] refers to the properties.<FIELD_NAME> portion of the schema. For example: [\"properties\", \"id\"] would refer to a field named `id`   # noqa: E501
 
-        :return: The breadcrumbs of this Metadata.  # noqa: E501
+        :return: The breadcrumb of this Metadata.  # noqa: E501
         :rtype: list[str]
         """
-        return self._breadcrumbs
+        return self._breadcrumb
 
-    @breadcrumbs.setter
-    def breadcrumbs(self, breadcrumbs):
-        """Sets the breadcrumbs of this Metadata.
+    @breadcrumb.setter
+    def breadcrumb(self, breadcrumb):
+        """Sets the breadcrumb of this Metadata.
 
         An array of strings describing a path into the schema. For example: A value of [] refers to the entire schema, or stream A value of [\"properties\", \"<FIELD_NAME>\"] refers to the properties.<FIELD_NAME> portion of the schema. For example: [\"properties\", \"id\"] would refer to a field named `id`   # noqa: E501
 
-        :param breadcrumbs: The breadcrumbs of this Metadata.  # noqa: E501
+        :param breadcrumb: The breadcrumb of this Metadata.  # noqa: E501
         :type: list[str]
         """
-        if self.local_vars_configuration.client_side_validation and breadcrumbs is None:  # noqa: E501
-            raise ValueError("Invalid value for `breadcrumbs`, must not be `None`")  # noqa: E501
 
-        self._breadcrumbs = breadcrumbs
+        self._breadcrumb = breadcrumb
 
     @property
-    def metadata(self):
-        """Gets the metadata of this Metadata.  # noqa: E501
+    def metadata_object(self):
+        """Gets the metadata_object of this Metadata.  # noqa: E501
 
-        An object containing metadata associated with the breadcrumb. The type of metadata object depends on the breadcrumb: For the entire schema (breadcrumb: []), this will be a Stream-level Metadata object. For an individual field (breadcrumb: [\"properties\", \"<FIELD_NAME>\"]), this will be a Field-level Metadata object   # noqa: E501
 
-        :return: The metadata of this Metadata.  # noqa: E501
-        :rtype: OneOfstreamLevelMetadatafieldLevelMetadata
+        :return: The metadata_object of this Metadata.  # noqa: E501
+        :rtype: MetadataObject
         """
-        return self._metadata
+        return self._metadata_object
 
-    @metadata.setter
-    def metadata(self, metadata):
-        """Sets the metadata of this Metadata.
+    @metadata_object.setter
+    def metadata_object(self, metadata_object):
+        """Sets the metadata_object of this Metadata.
 
-        An object containing metadata associated with the breadcrumb. The type of metadata object depends on the breadcrumb: For the entire schema (breadcrumb: []), this will be a Stream-level Metadata object. For an individual field (breadcrumb: [\"properties\", \"<FIELD_NAME>\"]), this will be a Field-level Metadata object   # noqa: E501
 
-        :param metadata: The metadata of this Metadata.  # noqa: E501
-        :type: OneOfstreamLevelMetadatafieldLevelMetadata
+        :param metadata_object: The metadata_object of this Metadata.  # noqa: E501
+        :type: MetadataObject
         """
-        if self.local_vars_configuration.client_side_validation and metadata is None:  # noqa: E501
-            raise ValueError("Invalid value for `metadata`, must not be `None`")  # noqa: E501
 
-        self._metadata = metadata
+        self._metadata_object = metadata_object
 
     def to_dict(self):
         """Returns the model properties as a dict"""

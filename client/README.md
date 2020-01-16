@@ -63,7 +63,8 @@ create_destination_body = stitch_connect_client.CreateDestinationBody() # Create
 
 try:
     # Creates a new destination. Only a single destination is supported per Stitch client account. 
-    api_instance.create_destination(create_destination_body)
+    api_response = api_instance.create_destination(create_destination_body)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DestinationsApi->create_destination: %s\n" % e)
 
@@ -109,9 +110,11 @@ Class | Method | HTTP request | Description
  - [ErrorObject](docs/ErrorObject.md)
  - [ErrorObjectError](docs/ErrorObjectError.md)
  - [FieldLevelMetadata](docs/FieldLevelMetadata.md)
+ - [ForcedReplicationMethod](docs/ForcedReplicationMethod.md)
  - [HookNotification](docs/HookNotification.md)
  - [HookNotificationConfig](docs/HookNotificationConfig.md)
  - [Metadata](docs/Metadata.md)
+ - [MetadataObject](docs/MetadataObject.md)
  - [ReplicationJob](docs/ReplicationJob.md)
  - [S3DestinationFormProperties](docs/S3DestinationFormProperties.md)
  - [SalesforceSourceFormProperties](docs/SalesforceSourceFormProperties.md)

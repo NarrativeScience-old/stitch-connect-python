@@ -5,7 +5,7 @@ Contained in Metadata and Stream objects, the Stream-level Metadata object conta
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **database_name** | **str** | For database sources only. The name of the database containing the stream.  | [optional] 
-**forced_replication_method** | **str** | Indicates which Replication Method is required for the stream. Possible values are: FULL_TABLE - The stream is using Full Table Replication INCREMENTAL - The stream is using Key-based Incremental Replication LOG_BASED - The stream is using Log-based Incremental Replication.  | [optional] 
+**forced_replication_method** | [**ForcedReplicationMethod**](ForcedReplicationMethod.md) |  | [optional] 
 **is_view** | **bool** | For database sources only. Indicates if the stream is a database view.  | [optional] 
 **replication_key** | **str** | Indicates the field being used as the stream’s Replication Key.  | [optional] 
 **replication_method** | **str** | The Replication Method the stream uses to replicate data. Accepted values are: FULL_TABLE - The stream is using Full Table Replication INCREMENTAL - The stream is using Key-based Incremental Replication LOG_BASED - The stream is using Log-based Incremental Replication. Note: This method is only available for certain database sources, and requires additional setup to use.  | [optional] 

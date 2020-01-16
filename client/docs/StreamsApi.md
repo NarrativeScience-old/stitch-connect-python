@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **get_stream_schema**
-> get_stream_schema(source_id, stream_id)
+> StreamSchema get_stream_schema(source_id, stream_id)
 
 Retrieves the schema for a source’s stream by the source and stream’s unique identifiers. 
 
@@ -36,7 +36,8 @@ stream_id = 'stream_id_example' # str | The ID of the source
 
 try:
     # Retrieves the schema for a source’s stream by the source and stream’s unique identifiers. 
-    api_instance.get_stream_schema(source_id, stream_id)
+    api_response = api_instance.get_stream_schema(source_id, stream_id)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling StreamsApi->get_stream_schema: %s\n" % e)
 ```
@@ -50,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StreamSchema**](StreamSchema.md)
 
 ### Authorization
 
@@ -59,13 +60,13 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
-**400** | Invalid source ID |  -  |
+**200** | Schema for a stream object |  -  |
+**400** | Invalid stream ID |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
