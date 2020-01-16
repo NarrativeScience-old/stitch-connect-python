@@ -4,7 +4,7 @@
 
 <!-- Short description of the package -->
 
-Features:
+An asynchronous python client for calling the Stitch Connect API.
 
 - <!-- list of features -->
 
@@ -24,6 +24,7 @@ pip install stitch-connect-client
 
 ## Guide
 
+For documentation on how to use the client, refer to the README in the [client directory](https://github.com/NarrativeScience/stitch-connect-python/client/)
 <!-- Subsections explaining how to use the package -->
 
 ## Development
