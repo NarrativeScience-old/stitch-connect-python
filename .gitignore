@@ -1,3 +1,9 @@
+.DS_Store
+.venv*
+.vscode
+**/*.pyc
+**/dist
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
