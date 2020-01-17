@@ -11,7 +11,7 @@ license = "BSD-3-Clause"
 description-file = "README.md"
 requires = [
     "certifi>=14.05.14",
-    "future; python_version<=2.7",
+    "future; python_version<='2.7'",
     "six>=1.10",
     "python_dateutil>=2.5.3",
     "setuptools>=21.0.0",
@@ -23,9 +23,9 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-requires-python = ">=3.6,<4"
-keywords = "stitch,openapi"
+requires-python = ">=2.7,<2.8,>=3.6,<4"
+keywords = "Stitch Connect,Open API,OpenAPI-Generator"
 
 [tool.flit.sdist]
 include = ["LICENSE.md"]
-exclude = ["tests/"]
+exclude = ["test/"]
