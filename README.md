@@ -144,6 +144,6 @@ npx openapi-generator generate \
     --package-name stitch_connect_client \
     --git-user-id NarrativeScience \
     --git-repo-id stitch-connect-python \
-    -p packageVersion=0.1.0
+    -p packageVersion=0.1.0 \
     -t templates
 ```
