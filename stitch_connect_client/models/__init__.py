@@ -30,6 +30,7 @@ from stitch_connect_client.models.error_object import ErrorObject
 from stitch_connect_client.models.error_object_error import ErrorObjectError
 from stitch_connect_client.models.field_level_metadata import FieldLevelMetadata
 from stitch_connect_client.models.forced_replication_method import ForcedReplicationMethod
+from stitch_connect_client.models.forced_replication_method_object import ForcedReplicationMethodObject
 from stitch_connect_client.models.hook_notification import HookNotification
 from stitch_connect_client.models.hook_notification_config import HookNotificationConfig
 from stitch_connect_client.models.metadata import Metadata

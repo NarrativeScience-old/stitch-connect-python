@@ -33,81 +33,17 @@ class ForcedReplicationMethod(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'reason': 'str',
-        'replication_method': 'str'
     }
 
     attribute_map = {
-        'reason': 'reason',
-        'replication_method': 'replication-method'
     }
 
-    def __init__(self, reason=None, replication_method=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, local_vars_configuration=None):  # noqa: E501
         """ForcedReplicationMethod - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
-
-        self._reason = None
-        self._replication_method = None
         self.discriminator = None
-
-        if reason is not None:
-            self.reason = reason
-        if replication_method is not None:
-            self.replication_method = replication_method
-
-    @property
-    def reason(self):
-        """Gets the reason of this ForcedReplicationMethod.  # noqa: E501
-
-        The reason for the forced Replication Method  # noqa: E501
-
-        :return: The reason of this ForcedReplicationMethod.  # noqa: E501
-        :rtype: str
-        """
-        return self._reason
-
-    @reason.setter
-    def reason(self, reason):
-        """Sets the reason of this ForcedReplicationMethod.
-
-        The reason for the forced Replication Method  # noqa: E501
-
-        :param reason: The reason of this ForcedReplicationMethod.  # noqa: E501
-        :type: str
-        """
-
-        self._reason = reason
-
-    @property
-    def replication_method(self):
-        """Gets the replication_method of this ForcedReplicationMethod.  # noqa: E501
-
-        Indicates which Replication Method is required for the stream. Possible values are: FULL_TABLE - The stream is using Full Table Replication INCREMENTAL - The stream is using Key-based Incremental Replication LOG_BASED - The stream is using Log-based Incremental Replication.   # noqa: E501
-
-        :return: The replication_method of this ForcedReplicationMethod.  # noqa: E501
-        :rtype: str
-        """
-        return self._replication_method
-
-    @replication_method.setter
-    def replication_method(self, replication_method):
-        """Sets the replication_method of this ForcedReplicationMethod.
-
-        Indicates which Replication Method is required for the stream. Possible values are: FULL_TABLE - The stream is using Full Table Replication INCREMENTAL - The stream is using Key-based Incremental Replication LOG_BASED - The stream is using Log-based Incremental Replication.   # noqa: E501
-
-        :param replication_method: The replication_method of this ForcedReplicationMethod.  # noqa: E501
-        :type: str
-        """
-        allowed_values = ["FULL_TABLE", "INCREMENTAL", "LOG_BASED"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and replication_method not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `replication_method` ({0}), must be one of {1}"  # noqa: E501
-                .format(replication_method, allowed_values)
-            )
-
-        self._replication_method = replication_method
 
     def to_dict(self):
         """Returns the model properties as a dict"""
