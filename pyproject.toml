@@ -3,14 +3,18 @@ requires = ["flit_core >=2,<3"]
 build-backend = "flit_core.buildapi"
 
 [tool.flit.metadata]
-module = "my_package_name"
-author = "Jerry Seinfeld"
-author-email = "jseinfeld@narrativescience.com"
-home-page = "https://github.com/NarrativeScience/my-package-name"
+module = "stitch_connect_client"
+author = "Annie Xu"
+author-email = "axu@narrativescience.com"
+home-page = "https://github.com/NarrativeScience/stitch-connect-python"
 license = "BSD-3-Clause"
 description-file = "README.md"
 requires = [
-    # Requirements here, e.g. "backoff>=1.8.0,<2",
+    "certifi>=14.05.14",
+    "six>=1.10",
+    "python_dateutil>=2.5.3",
+    "setuptools>=21.0.0",
+    "urllib3>=1.15.1",
 ]
 classifiers = [
     "Intended Audience :: Developers",
@@ -19,8 +23,8 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 requires-python = ">=3.6,<4"
-keywords = "comma,separated,keywords"
+keywords = "Stitch Connect,Open API,OpenAPI-Generator"
 
 [tool.flit.sdist]
 include = ["LICENSE.md"]
-exclude = ["tests/"]
+exclude = ["test/"]
