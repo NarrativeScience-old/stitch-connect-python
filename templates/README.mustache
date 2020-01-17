@@ -1,6 +1,6 @@
-# {{{projectName}}}
+# {{{packageName}}}
 
-[![](https://img.shields.io/pypi/v/{{{projectName}}}.svg)](https://pypi.org/pypi/{{{projectName}}}/) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![](https://img.shields.io/pypi/v/{{{packageName}}}.svg)](https://pypi.org/pypi/{{{packageName}}}/) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
 {{#appDescription}}
 {{{appDescription}}}
@@ -29,10 +29,10 @@ Table of Contents:
 
 ## Installation
 
-{{{projectName}}} requires Python 3.6 or above.
+This package requires Python 3.6 or above.
 
 ```bash
-pip install {{{projectName}}}
+pip install {{{packageName}}}
 ```
 
 ## Guide
@@ -70,7 +70,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
-{{#models}}{{#model}} - [{{{classname}}}]({{modelDocPath}}{{{classname}}}.md)
+{{#models}}{{#model}}- [{{{classname}}}]({{modelDocPath}}{{{classname}}}.md)
 {{/model}}{{/models}}
 
 ## Documentation for Authorization
@@ -108,7 +108,7 @@ Class | Method | HTTP request | Description
 
 ## Development
 
-To develop {{{projectName}}}, install dependencies and enable the pre-commit hook:
+To develop `{{{packageName}}}`, install dependencies and enable the pre-commit hook:
 
 ```bash
 pip install pre-commit tox
@@ -125,13 +125,13 @@ To regenerate the client, run:
 
 ```bash
 npx openapi-generator generate \
-    -i ~/stitch-connect-openapi/openapi.yml \
+    -i https://raw.githubusercontent.com/NarrativeScience/stitch-connect-openapi/master/openapi.yml \
     -g python \
     -o . \
     --library asyncio \
-    --package-name stitch_connect_client \
+    --package-name {{packageName}} \
     --git-user-id NarrativeScience \
-    --git-repo-id stitch-connect-python \
+    --git-repo-id {{packageName}} \
     -p packageVersion={{packageVersion}} \
     -t templates
 ```
