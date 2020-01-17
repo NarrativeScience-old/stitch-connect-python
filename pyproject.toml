@@ -10,7 +10,12 @@ home-page = "https://github.com/NarrativeScience/stitch-connect-python"
 license = "BSD-3-Clause"
 description-file = "README.md"
 requires = [
-    # Requirements here, e.g. "backoff>=1.8.0,<2",
+    "certifi>=14.05.14",
+    "future; python_version<=2.7",
+    "six>=1.10",
+    "python_dateutil>=2.5.3",
+    "setuptools>=21.0.0",
+    "urllib3>=1.15.1",
 ]
 classifiers = [
     "Intended Audience :: Developers",
@@ -19,7 +24,7 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 requires-python = ">=3.6,<4"
-keywords = "comma,separated,keywords"
+keywords = "stitch,openapi"
 
 [tool.flit.sdist]
 include = ["LICENSE.md"]
