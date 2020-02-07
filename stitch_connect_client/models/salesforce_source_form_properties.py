@@ -247,12 +247,6 @@ class SalesforceSourceFormProperties(object):
         """
         if self.local_vars_configuration.client_side_validation and frequency_in_minutes is None:  # noqa: E501
             raise ValueError("Invalid value for `frequency_in_minutes`, must not be `None`")  # noqa: E501
-        allowed_values = ["30", "60", "360", "720", "1440"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and frequency_in_minutes not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `frequency_in_minutes` ({0}), must be one of {1}"  # noqa: E501
-                .format(frequency_in_minutes, allowed_values)
-            )
 
         self._frequency_in_minutes = frequency_in_minutes
 
