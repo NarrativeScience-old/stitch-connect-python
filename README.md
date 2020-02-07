@@ -94,6 +94,7 @@ Class | Method | HTTP request | Description
 - [ErrorObjectError](docs/ErrorObjectError.md)
 - [FieldLevelMetadata](docs/FieldLevelMetadata.md)
 - [ForcedReplicationMethod](docs/ForcedReplicationMethod.md)
+- [ForcedReplicationMethodObject](docs/ForcedReplicationMethodObject.md)
 - [HookNotification](docs/HookNotification.md)
 - [HookNotificationConfig](docs/HookNotificationConfig.md)
 - [Metadata](docs/Metadata.md)
