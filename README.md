@@ -94,6 +94,7 @@ Class | Method | HTTP request | Description
 - [ErrorObjectError](docs/ErrorObjectError.md)
 - [FieldLevelMetadata](docs/FieldLevelMetadata.md)
 - [ForcedReplicationMethod](docs/ForcedReplicationMethod.md)
+- [ForcedReplicationMethodObject](docs/ForcedReplicationMethodObject.md)
 - [HookNotification](docs/HookNotification.md)
 - [HookNotificationConfig](docs/HookNotificationConfig.md)
 - [Metadata](docs/Metadata.md)
@@ -143,7 +144,7 @@ npx openapi-generator generate \
     --library asyncio \
     --package-name stitch_connect_client \
     --git-user-id NarrativeScience \
-    --git-repo-id stitch_connect_client \
+    --git-repo-id stitch-connect-python \
     -p packageVersion=0.1.1 \
     -t templates
 ```

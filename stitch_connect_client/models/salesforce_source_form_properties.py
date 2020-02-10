@@ -35,11 +35,15 @@ class SalesforceSourceFormProperties(object):
     openapi_types = {
         'anchor_time': 'str',
         'api_type': 'str',
+        'client_id': 'str',
+        'client_secret': 'str',
         'cron_expression': 'str',
         'frequency_in_minutes': 'str',
+        'instance_url': 'str',
         'is_sandbox': 'str',
         'quota_percent_per_run': 'str',
         'quota_percent_total': 'str',
+        'refresh_token': 'str',
         'select_fields_by_default': 'str',
         'start_date': 'str'
     }
@@ -47,16 +51,20 @@ class SalesforceSourceFormProperties(object):
     attribute_map = {
         'anchor_time': 'anchor_time',
         'api_type': 'api_type',
+        'client_id': 'client_id',
+        'client_secret': 'client_secret',
         'cron_expression': 'cron_expression',
         'frequency_in_minutes': 'frequency_in_minutes',
+        'instance_url': 'instance_url',
         'is_sandbox': 'is_sandbox',
         'quota_percent_per_run': 'quota_percent_per_run',
         'quota_percent_total': 'quota_percent_total',
+        'refresh_token': 'refresh_token',
         'select_fields_by_default': 'select_fields_by_default',
         'start_date': 'start_date'
     }
 
-    def __init__(self, anchor_time=None, api_type=None, cron_expression=None, frequency_in_minutes=None, is_sandbox=None, quota_percent_per_run=None, quota_percent_total=None, select_fields_by_default=None, start_date=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, anchor_time=None, api_type=None, client_id=None, client_secret=None, cron_expression=None, frequency_in_minutes=None, instance_url=None, is_sandbox=None, quota_percent_per_run=None, quota_percent_total=None, refresh_token=None, select_fields_by_default=None, start_date=None, local_vars_configuration=None):  # noqa: E501
         """SalesforceSourceFormProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -64,11 +72,15 @@ class SalesforceSourceFormProperties(object):
 
         self._anchor_time = None
         self._api_type = None
+        self._client_id = None
+        self._client_secret = None
         self._cron_expression = None
         self._frequency_in_minutes = None
+        self._instance_url = None
         self._is_sandbox = None
         self._quota_percent_per_run = None
         self._quota_percent_total = None
+        self._refresh_token = None
         self._select_fields_by_default = None
         self._start_date = None
         self.discriminator = None
@@ -76,15 +88,23 @@ class SalesforceSourceFormProperties(object):
         if anchor_time is not None:
             self.anchor_time = anchor_time
         self.api_type = api_type
+        if client_id is not None:
+            self.client_id = client_id
+        if client_secret is not None:
+            self.client_secret = client_secret
         if cron_expression is not None:
             self.cron_expression = cron_expression
         self.frequency_in_minutes = frequency_in_minutes
+        if instance_url is not None:
+            self.instance_url = instance_url
         if is_sandbox is not None:
             self.is_sandbox = is_sandbox
         if quota_percent_per_run is not None:
             self.quota_percent_per_run = quota_percent_per_run
         if quota_percent_total is not None:
             self.quota_percent_total = quota_percent_total
+        if refresh_token is not None:
+            self.refresh_token = refresh_token
         self.select_fields_by_default = select_fields_by_default
         self.start_date = start_date
 
@@ -137,6 +157,52 @@ class SalesforceSourceFormProperties(object):
         self._api_type = api_type
 
     @property
+    def client_id(self):
+        """Gets the client_id of this SalesforceSourceFormProperties.  # noqa: E501
+
+        The secure OAuth 2.0 identifier for the client application.   # noqa: E501
+
+        :return: The client_id of this SalesforceSourceFormProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._client_id
+
+    @client_id.setter
+    def client_id(self, client_id):
+        """Sets the client_id of this SalesforceSourceFormProperties.
+
+        The secure OAuth 2.0 identifier for the client application.   # noqa: E501
+
+        :param client_id: The client_id of this SalesforceSourceFormProperties.  # noqa: E501
+        :type: str
+        """
+
+        self._client_id = client_id
+
+    @property
+    def client_secret(self):
+        """Gets the client_secret of this SalesforceSourceFormProperties.  # noqa: E501
+
+        The secure OAuth 2.0 secret key for the client application.   # noqa: E501
+
+        :return: The client_secret of this SalesforceSourceFormProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._client_secret
+
+    @client_secret.setter
+    def client_secret(self, client_secret):
+        """Sets the client_secret of this SalesforceSourceFormProperties.
+
+        The secure OAuth 2.0 secret key for the client application.   # noqa: E501
+
+        :param client_secret: The client_secret of this SalesforceSourceFormProperties.  # noqa: E501
+        :type: str
+        """
+
+        self._client_secret = client_secret
+
+    @property
     def cron_expression(self):
         """Gets the cron_expression of this SalesforceSourceFormProperties.  # noqa: E501
 
@@ -181,14 +247,31 @@ class SalesforceSourceFormProperties(object):
         """
         if self.local_vars_configuration.client_side_validation and frequency_in_minutes is None:  # noqa: E501
             raise ValueError("Invalid value for `frequency_in_minutes`, must not be `None`")  # noqa: E501
-        allowed_values = ["30", "60", "360", "720", "1440"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and frequency_in_minutes not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `frequency_in_minutes` ({0}), must be one of {1}"  # noqa: E501
-                .format(frequency_in_minutes, allowed_values)
-            )
 
         self._frequency_in_minutes = frequency_in_minutes
+
+    @property
+    def instance_url(self):
+        """Gets the instance_url of this SalesforceSourceFormProperties.  # noqa: E501
+
+        The url of the instance to connect to.  # noqa: E501
+
+        :return: The instance_url of this SalesforceSourceFormProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._instance_url
+
+    @instance_url.setter
+    def instance_url(self, instance_url):
+        """Sets the instance_url of this SalesforceSourceFormProperties.
+
+        The url of the instance to connect to.  # noqa: E501
+
+        :param instance_url: The instance_url of this SalesforceSourceFormProperties.  # noqa: E501
+        :type: str
+        """
+
+        self._instance_url = instance_url
 
     @property
     def is_sandbox(self):
@@ -258,6 +341,29 @@ class SalesforceSourceFormProperties(object):
         """
 
         self._quota_percent_total = quota_percent_total
+
+    @property
+    def refresh_token(self):
+        """Gets the refresh_token of this SalesforceSourceFormProperties.  # noqa: E501
+
+        The OAuth 2.0 refresh token used to access the Salesforce API.  # noqa: E501
+
+        :return: The refresh_token of this SalesforceSourceFormProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._refresh_token
+
+    @refresh_token.setter
+    def refresh_token(self, refresh_token):
+        """Sets the refresh_token of this SalesforceSourceFormProperties.
+
+        The OAuth 2.0 refresh token used to access the Salesforce API.  # noqa: E501
+
+        :param refresh_token: The refresh_token of this SalesforceSourceFormProperties.  # noqa: E501
+        :type: str
+        """
+
+        self._refresh_token = refresh_token
 
     @property
     def select_fields_by_default(self):
