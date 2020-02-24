@@ -37,7 +37,7 @@ class Stream(object):
         'selected': 'bool',
         'stream_name': 'str',
         'tap_stream_id': 'str',
-        'metadata': 'StreamLevelMetadata'
+        'metadata': 'list[StreamLevelMetadata]'
     }
 
     attribute_map = {
@@ -170,7 +170,7 @@ class Stream(object):
 
 
         :return: The metadata of this Stream.  # noqa: E501
-        :rtype: StreamLevelMetadata
+        :rtype: list[StreamLevelMetadata]
         """
         return self._metadata
 
@@ -180,7 +180,7 @@ class Stream(object):
 
 
         :param metadata: The metadata of this Stream.  # noqa: E501
-        :type: StreamLevelMetadata
+        :type: list[StreamLevelMetadata]
         """
 
         self._metadata = metadata
