@@ -14,7 +14,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "0.1.2"
+__version__ = "0.1.3"
 
 # import apis into sdk package
 from stitch_connect_client.api.destinations_api import DestinationsApi
@@ -60,5 +60,6 @@ from stitch_connect_client.models.source_report_card import SourceReportCard
 from stitch_connect_client.models.stream import Stream
 from stitch_connect_client.models.stream_level_metadata import StreamLevelMetadata
 from stitch_connect_client.models.stream_schema import StreamSchema
+from stitch_connect_client.models.streams_update import StreamsUpdate
 from stitch_connect_client.models.update_source_body import UpdateSourceBody
 
