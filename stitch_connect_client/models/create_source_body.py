@@ -35,16 +35,18 @@ class CreateSourceBody(object):
     openapi_types = {
         'display_name': 'str',
         'type': 'str',
+        'name': 'str',
         'properties': 'SourceFormProperties'
     }
 
     attribute_map = {
         'display_name': 'display_name',
         'type': 'type',
+        'name': 'name',
         'properties': 'properties'
     }
 
-    def __init__(self, display_name=None, type=None, properties=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, display_name=None, type=None, name=None, properties=None, local_vars_configuration=None):  # noqa: E501
         """CreateSourceBody - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -52,11 +54,14 @@ class CreateSourceBody(object):
 
         self._display_name = None
         self._type = None
+        self._name = None
         self._properties = None
         self.discriminator = None
 
         self.display_name = display_name
         self.type = type
+        if name is not None:
+            self.name = name
         if properties is not None:
             self.properties = properties
 
@@ -109,6 +114,29 @@ class CreateSourceBody(object):
             raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
 
         self._type = type
+
+    @property
+    def name(self):
+        """Gets the name of this CreateSourceBody.  # noqa: E501
+
+        The destination schema name that the data from this source will be loaded into. Names must: - Contain only lowercase alphanumerics and underscores - Be unique within each Stitch client account   # noqa: E501
+
+        :return: The name of this CreateSourceBody.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this CreateSourceBody.
+
+        The destination schema name that the data from this source will be loaded into. Names must: - Contain only lowercase alphanumerics and underscores - Be unique within each Stitch client account   # noqa: E501
+
+        :param name: The name of this CreateSourceBody.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
 
     @property
     def properties(self):

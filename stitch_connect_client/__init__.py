@@ -14,7 +14,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "0.1.3"
+__version__ = "0.1.4"
 
 # import apis into sdk package
 from stitch_connect_client.api.destinations_api import DestinationsApi
