@@ -1,11 +1,11 @@
 # CreateDestinationBody
 
-Object containing information about the destination type and the properties associated with that type 
+Object containing information about the destination type and the properties associated with that type
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **str** | The destination type. Must be one of: azure_sqldw, postgres, redshift, s3, or snowflake.  | 
-**properties** | [**DestinationFormProperties**](DestinationFormProperties.md) |  | 
+**type** | **str** | The destination type. Must be one of: azure_sqldw, postgres, redshift, s3, or snowflake.  |
+**properties** | [**DestinationFormProperties**](DestinationFormProperties.md) |  |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

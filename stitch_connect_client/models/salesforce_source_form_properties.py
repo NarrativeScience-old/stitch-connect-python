@@ -33,38 +33,54 @@ class SalesforceSourceFormProperties(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'anchor_time': 'str',
-        'api_type': 'str',
-        'client_id': 'str',
-        'client_secret': 'str',
-        'cron_expression': 'str',
-        'frequency_in_minutes': 'str',
-        'instance_url': 'str',
-        'is_sandbox': 'str',
-        'quota_percent_per_run': 'str',
-        'quota_percent_total': 'str',
-        'refresh_token': 'str',
-        'select_fields_by_default': 'str',
-        'start_date': 'str'
+        "anchor_time": "str",
+        "api_type": "str",
+        "client_id": "str",
+        "client_secret": "str",
+        "cron_expression": "str",
+        "frequency_in_minutes": "str",
+        "instance_url": "str",
+        "is_sandbox": "str",
+        "quota_percent_per_run": "str",
+        "quota_percent_total": "str",
+        "refresh_token": "str",
+        "select_fields_by_default": "str",
+        "start_date": "str",
     }
 
     attribute_map = {
-        'anchor_time': 'anchor_time',
-        'api_type': 'api_type',
-        'client_id': 'client_id',
-        'client_secret': 'client_secret',
-        'cron_expression': 'cron_expression',
-        'frequency_in_minutes': 'frequency_in_minutes',
-        'instance_url': 'instance_url',
-        'is_sandbox': 'is_sandbox',
-        'quota_percent_per_run': 'quota_percent_per_run',
-        'quota_percent_total': 'quota_percent_total',
-        'refresh_token': 'refresh_token',
-        'select_fields_by_default': 'select_fields_by_default',
-        'start_date': 'start_date'
+        "anchor_time": "anchor_time",
+        "api_type": "api_type",
+        "client_id": "client_id",
+        "client_secret": "client_secret",
+        "cron_expression": "cron_expression",
+        "frequency_in_minutes": "frequency_in_minutes",
+        "instance_url": "instance_url",
+        "is_sandbox": "is_sandbox",
+        "quota_percent_per_run": "quota_percent_per_run",
+        "quota_percent_total": "quota_percent_total",
+        "refresh_token": "refresh_token",
+        "select_fields_by_default": "select_fields_by_default",
+        "start_date": "start_date",
     }
 
-    def __init__(self, anchor_time=None, api_type=None, client_id=None, client_secret=None, cron_expression=None, frequency_in_minutes=None, instance_url=None, is_sandbox=None, quota_percent_per_run=None, quota_percent_total=None, refresh_token=None, select_fields_by_default=None, start_date=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(
+        self,
+        anchor_time=None,
+        api_type=None,
+        client_id=None,
+        client_secret=None,
+        cron_expression=None,
+        frequency_in_minutes=None,
+        instance_url=None,
+        is_sandbox=None,
+        quota_percent_per_run=None,
+        quota_percent_total=None,
+        refresh_token=None,
+        select_fields_by_default=None,
+        start_date=None,
+        local_vars_configuration=None,
+    ):  # noqa: E501
         """SalesforceSourceFormProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -151,8 +167,12 @@ class SalesforceSourceFormProperties(object):
         :param api_type: The api_type of this SalesforceSourceFormProperties.  # noqa: E501
         :type: str
         """
-        if self.local_vars_configuration.client_side_validation and api_type is None:  # noqa: E501
-            raise ValueError("Invalid value for `api_type`, must not be `None`")  # noqa: E501
+        if (
+            self.local_vars_configuration.client_side_validation and api_type is None
+        ):  # noqa: E501
+            raise ValueError(
+                "Invalid value for `api_type`, must not be `None`"
+            )  # noqa: E501
 
         self._api_type = api_type
 
@@ -245,8 +265,13 @@ class SalesforceSourceFormProperties(object):
         :param frequency_in_minutes: The frequency_in_minutes of this SalesforceSourceFormProperties.  # noqa: E501
         :type: str
         """
-        if self.local_vars_configuration.client_side_validation and frequency_in_minutes is None:  # noqa: E501
-            raise ValueError("Invalid value for `frequency_in_minutes`, must not be `None`")  # noqa: E501
+        if (
+            self.local_vars_configuration.client_side_validation
+            and frequency_in_minutes is None
+        ):  # noqa: E501
+            raise ValueError(
+                "Invalid value for `frequency_in_minutes`, must not be `None`"
+            )  # noqa: E501
 
         self._frequency_in_minutes = frequency_in_minutes
 
@@ -385,8 +410,13 @@ class SalesforceSourceFormProperties(object):
         :param select_fields_by_default: The select_fields_by_default of this SalesforceSourceFormProperties.  # noqa: E501
         :type: str
         """
-        if self.local_vars_configuration.client_side_validation and select_fields_by_default is None:  # noqa: E501
-            raise ValueError("Invalid value for `select_fields_by_default`, must not be `None`")  # noqa: E501
+        if (
+            self.local_vars_configuration.client_side_validation
+            and select_fields_by_default is None
+        ):  # noqa: E501
+            raise ValueError(
+                "Invalid value for `select_fields_by_default`, must not be `None`"
+            )  # noqa: E501
 
         self._select_fields_by_default = select_fields_by_default
 
@@ -410,8 +440,12 @@ class SalesforceSourceFormProperties(object):
         :param start_date: The start_date of this SalesforceSourceFormProperties.  # noqa: E501
         :type: str
         """
-        if self.local_vars_configuration.client_side_validation and start_date is None:  # noqa: E501
-            raise ValueError("Invalid value for `start_date`, must not be `None`")  # noqa: E501
+        if (
+            self.local_vars_configuration.client_side_validation and start_date is None
+        ):  # noqa: E501
+            raise ValueError(
+                "Invalid value for `start_date`, must not be `None`"
+            )  # noqa: E501
 
         self._start_date = start_date
 
@@ -422,18 +456,20 @@ class SalesforceSourceFormProperties(object):
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if isinstance(value, list):
-                result[attr] = list(map(
-                    lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
-                    value
-                ))
+                result[attr] = list(
+                    map(lambda x: x.to_dict() if hasattr(x, "to_dict") else x, value)
+                )
             elif hasattr(value, "to_dict"):
                 result[attr] = value.to_dict()
             elif isinstance(value, dict):
-                result[attr] = dict(map(
-                    lambda item: (item[0], item[1].to_dict())
-                    if hasattr(item[1], "to_dict") else item,
-                    value.items()
-                ))
+                result[attr] = dict(
+                    map(
+                        lambda item: (item[0], item[1].to_dict())
+                        if hasattr(item[1], "to_dict")
+                        else item,
+                        value.items(),
+                    )
+                )
             else:
                 result[attr] = value
 

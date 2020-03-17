@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import stitch_connect_client
-from stitch_connect_client.models.s3_destination_form_properties import S3DestinationFormProperties  # noqa: E501
+from stitch_connect_client.models.s3_destination_form_properties import (  # noqa: E501
+    S3DestinationFormProperties,
+)
 from stitch_connect_client.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestS3DestinationFormProperties(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

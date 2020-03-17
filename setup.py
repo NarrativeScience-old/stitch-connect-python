@@ -10,7 +10,7 @@
 """
 
 
-from setuptools import setup, find_packages  # noqa: H301
+from setuptools import find_packages, setup  # noqa: H301
 
 NAME = "stitch-connect-client"
 VERSION = "0.1.5"
@@ -37,5 +37,5 @@ setup(
     include_package_data=True,
     long_description="""\
     https://www.stitchdata.com/docs/developers/stitch-connect/api  # noqa: E501
-    """
+    """,
 )

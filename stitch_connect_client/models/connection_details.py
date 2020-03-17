@@ -33,24 +33,33 @@ class ConnectionDetails(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'access': 'bool',
-        'default_scheduling_interval': 'int',
-        'pricing_tier': 'str',
-        'default_start_date': 'str',
-        'pipeline_state': 'str',
-        'protocol': 'str'
+        "access": "bool",
+        "default_scheduling_interval": "int",
+        "pricing_tier": "str",
+        "default_start_date": "str",
+        "pipeline_state": "str",
+        "protocol": "str",
     }
 
     attribute_map = {
-        'access': 'access',
-        'default_scheduling_interval': 'default_scheduling_interval',
-        'pricing_tier': 'pricing_tier',
-        'default_start_date': 'default_start_date',
-        'pipeline_state': 'pipeline_state',
-        'protocol': 'protocol'
+        "access": "access",
+        "default_scheduling_interval": "default_scheduling_interval",
+        "pricing_tier": "pricing_tier",
+        "default_start_date": "default_start_date",
+        "pipeline_state": "pipeline_state",
+        "protocol": "protocol",
     }
 
-    def __init__(self, access=None, default_scheduling_interval=None, pricing_tier=None, default_start_date=None, pipeline_state=None, protocol=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(
+        self,
+        access=None,
+        default_scheduling_interval=None,
+        pricing_tier=None,
+        default_start_date=None,
+        pipeline_state=None,
+        protocol=None,
+        local_vars_configuration=None,
+    ):  # noqa: E501
         """ConnectionDetails - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -144,10 +153,14 @@ class ConnectionDetails(object):
         :type: str
         """
         allowed_values = ["standard", "premium", "enterprise"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and pricing_tier not in allowed_values:  # noqa: E501
+        if (
+            self.local_vars_configuration.client_side_validation
+            and pricing_tier not in allowed_values
+        ):  # noqa: E501
             raise ValueError(
-                "Invalid value for `pricing_tier` ({0}), must be one of {1}"  # noqa: E501
-                .format(pricing_tier, allowed_values)
+                "Invalid value for `pricing_tier` ({0}), must be one of {1}".format(  # noqa: E501
+                    pricing_tier, allowed_values
+                )
             )
 
         self._pricing_tier = pricing_tier
@@ -196,10 +209,14 @@ class ConnectionDetails(object):
         :type: str
         """
         allowed_values = ["alpha", "beta", "released", "deprecated"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and pipeline_state not in allowed_values:  # noqa: E501
+        if (
+            self.local_vars_configuration.client_side_validation
+            and pipeline_state not in allowed_values
+        ):  # noqa: E501
             raise ValueError(
-                "Invalid value for `pipeline_state` ({0}), must be one of {1}"  # noqa: E501
-                .format(pipeline_state, allowed_values)
+                "Invalid value for `pipeline_state` ({0}), must be one of {1}".format(  # noqa: E501
+                    pipeline_state, allowed_values
+                )
             )
 
         self._pipeline_state = pipeline_state
@@ -234,18 +251,20 @@ class ConnectionDetails(object):
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if isinstance(value, list):
-                result[attr] = list(map(
-                    lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
-                    value
-                ))
+                result[attr] = list(
+                    map(lambda x: x.to_dict() if hasattr(x, "to_dict") else x, value)
+                )
             elif hasattr(value, "to_dict"):
                 result[attr] = value.to_dict()
             elif isinstance(value, dict):
-                result[attr] = dict(map(
-                    lambda item: (item[0], item[1].to_dict())
-                    if hasattr(item[1], "to_dict") else item,
-                    value.items()
-                ))
+                result[attr] = dict(
+                    map(
+                        lambda item: (item[0], item[1].to_dict())
+                        if hasattr(item[1], "to_dict")
+                        else item,
+                        value.items(),
+                    )
+                )
             else:
                 result[attr] = value
 

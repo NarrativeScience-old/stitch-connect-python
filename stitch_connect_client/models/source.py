@@ -33,36 +33,51 @@ class Source(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'int',
-        'created_at': 'str',
-        'deleted_at': 'str',
-        'display_name': 'str',
-        'name': 'str',
-        'paused_at': 'str',
-        'properties': 'SourceFormProperties',
-        'report_card': 'SourceReportCard',
-        'stitch_client_id': 'int',
-        'system_paused_at': 'str',
-        'type': 'str',
-        'updated_at': 'str'
+        "id": "int",
+        "created_at": "str",
+        "deleted_at": "str",
+        "display_name": "str",
+        "name": "str",
+        "paused_at": "str",
+        "properties": "SourceFormProperties",
+        "report_card": "SourceReportCard",
+        "stitch_client_id": "int",
+        "system_paused_at": "str",
+        "type": "str",
+        "updated_at": "str",
     }
 
     attribute_map = {
-        'id': 'id',
-        'created_at': 'created_at',
-        'deleted_at': 'deleted_at',
-        'display_name': 'display_name',
-        'name': 'name',
-        'paused_at': 'paused_at',
-        'properties': 'properties',
-        'report_card': 'report_card',
-        'stitch_client_id': 'stitch_client_id',
-        'system_paused_at': 'system_paused_at',
-        'type': 'type',
-        'updated_at': 'updated_at'
+        "id": "id",
+        "created_at": "created_at",
+        "deleted_at": "deleted_at",
+        "display_name": "display_name",
+        "name": "name",
+        "paused_at": "paused_at",
+        "properties": "properties",
+        "report_card": "report_card",
+        "stitch_client_id": "stitch_client_id",
+        "system_paused_at": "system_paused_at",
+        "type": "type",
+        "updated_at": "updated_at",
     }
 
-    def __init__(self, id=None, created_at=None, deleted_at=None, display_name=None, name=None, paused_at=None, properties=None, report_card=None, stitch_client_id=None, system_paused_at=None, type=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(
+        self,
+        id=None,
+        created_at=None,
+        deleted_at=None,
+        display_name=None,
+        name=None,
+        paused_at=None,
+        properties=None,
+        report_card=None,
+        stitch_client_id=None,
+        system_paused_at=None,
+        type=None,
+        updated_at=None,
+        local_vars_configuration=None,
+    ):  # noqa: E501
         """Source - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -386,18 +401,20 @@ class Source(object):
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if isinstance(value, list):
-                result[attr] = list(map(
-                    lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
-                    value
-                ))
+                result[attr] = list(
+                    map(lambda x: x.to_dict() if hasattr(x, "to_dict") else x, value)
+                )
             elif hasattr(value, "to_dict"):
                 result[attr] = value.to_dict()
             elif isinstance(value, dict):
-                result[attr] = dict(map(
-                    lambda item: (item[0], item[1].to_dict())
-                    if hasattr(item[1], "to_dict") else item,
-                    value.items()
-                ))
+                result[attr] = dict(
+                    map(
+                        lambda item: (item[0], item[1].to_dict())
+                        if hasattr(item[1], "to_dict")
+                        else item,
+                        value.items(),
+                    )
+                )
             else:
                 result[attr] = value
 

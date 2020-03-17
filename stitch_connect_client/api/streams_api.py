@@ -18,10 +18,7 @@ import re  # noqa: F401
 import six
 
 from stitch_connect_client.api_client import ApiClient
-from stitch_connect_client.exceptions import (
-    ApiTypeError,
-    ApiValueError
-)
+from stitch_connect_client.exceptions import ApiTypeError, ApiValueError
 
 
 class StreamsApi(object):
@@ -58,10 +55,14 @@ class StreamsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        return self.get_stream_schema_with_http_info(source_id, stream_id, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        return self.get_stream_schema_with_http_info(
+            source_id, stream_id, **kwargs
+        )  # noqa: E501
 
-    def get_stream_schema_with_http_info(self, source_id, stream_id, **kwargs):  # noqa: E501
+    def get_stream_schema_with_http_info(
+        self, source_id, stream_id, **kwargs
+    ):  # noqa: E501
         """Retrieves the schema for a source’s stream by the source and stream’s unique identifiers.   # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -88,36 +89,44 @@ class StreamsApi(object):
 
         local_var_params = locals()
 
-        all_params = ['source_id', 'stream_id']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["source_id", "stream_id"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
+        for key, val in six.iteritems(local_var_params["kwargs"]):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_stream_schema" % key
                 )
             local_var_params[key] = val
-        del local_var_params['kwargs']
+        del local_var_params["kwargs"]
         # verify the required parameter 'source_id' is set
-        if self.api_client.client_side_validation and ('source_id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['source_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `source_id` when calling `get_stream_schema`")  # noqa: E501
+        if self.api_client.client_side_validation and (
+            "source_id" not in local_var_params
+            or local_var_params["source_id"] is None  # noqa: E501
+        ):  # noqa: E501
+            raise ApiValueError(
+                "Missing the required parameter `source_id` when calling `get_stream_schema`"
+            )  # noqa: E501
         # verify the required parameter 'stream_id' is set
-        if self.api_client.client_side_validation and ('stream_id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['stream_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `stream_id` when calling `get_stream_schema`")  # noqa: E501
+        if self.api_client.client_side_validation and (
+            "stream_id" not in local_var_params
+            or local_var_params["stream_id"] is None  # noqa: E501
+        ):  # noqa: E501
+            raise ApiValueError(
+                "Missing the required parameter `stream_id` when calling `get_stream_schema`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'source_id' in local_var_params:
-            path_params['source_id'] = local_var_params['source_id']  # noqa: E501
-        if 'stream_id' in local_var_params:
-            path_params['stream_id'] = local_var_params['stream_id']  # noqa: E501
+        if "source_id" in local_var_params:
+            path_params["source_id"] = local_var_params["source_id"]  # noqa: E501
+        if "stream_id" in local_var_params:
+            path_params["stream_id"] = local_var_params["stream_id"]  # noqa: E501
 
         query_params = []
 
@@ -128,27 +137,32 @@ class StreamsApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['bearerAuth']  # noqa: E501
+        auth_settings = ["bearerAuth"]  # noqa: E501
 
         return self.api_client.call_api(
-            '/v4/sources/{source_id}/streams/{stream_id}', 'GET',
+            "/v4/sources/{source_id}/streams/{stream_id}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='StreamSchema',  # noqa: E501
+            response_type="StreamSchema",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=local_var_params.get("async_req"),
+            _return_http_data_only=local_var_params.get(
+                "_return_http_data_only"
+            ),  # noqa: E501
+            _preload_content=local_var_params.get("_preload_content", True),
+            _request_timeout=local_var_params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_streams(self, source_id, **kwargs):  # noqa: E501
         """Lists the available streams for a source.  # noqa: E501
@@ -171,7 +185,7 @@ class StreamsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
+        kwargs["_return_http_data_only"] = True
         return self.get_streams_with_http_info(source_id, **kwargs)  # noqa: E501
 
     def get_streams_with_http_info(self, source_id, **kwargs):  # noqa: E501
@@ -200,30 +214,34 @@ class StreamsApi(object):
 
         local_var_params = locals()
 
-        all_params = ['source_id']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["source_id"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
+        for key, val in six.iteritems(local_var_params["kwargs"]):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_streams" % key
                 )
             local_var_params[key] = val
-        del local_var_params['kwargs']
+        del local_var_params["kwargs"]
         # verify the required parameter 'source_id' is set
-        if self.api_client.client_side_validation and ('source_id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['source_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `source_id` when calling `get_streams`")  # noqa: E501
+        if self.api_client.client_side_validation and (
+            "source_id" not in local_var_params
+            or local_var_params["source_id"] is None  # noqa: E501
+        ):  # noqa: E501
+            raise ApiValueError(
+                "Missing the required parameter `source_id` when calling `get_streams`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'source_id' in local_var_params:
-            path_params['source_id'] = local_var_params['source_id']  # noqa: E501
+        if "source_id" in local_var_params:
+            path_params["source_id"] = local_var_params["source_id"]  # noqa: E501
 
         query_params = []
 
@@ -234,29 +252,36 @@ class StreamsApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['bearerAuth']  # noqa: E501
+        auth_settings = ["bearerAuth"]  # noqa: E501
 
         return self.api_client.call_api(
-            '/v4/sources/{source_id}/streams', 'GET',
+            "/v4/sources/{source_id}/streams",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Stream]',  # noqa: E501
+            response_type="list[Stream]",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=local_var_params.get("async_req"),
+            _return_http_data_only=local_var_params.get(
+                "_return_http_data_only"
+            ),  # noqa: E501
+            _preload_content=local_var_params.get("_preload_content", True),
+            _request_timeout=local_var_params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
-    def update_stream_metadata(self, source_id, streams_update_list, **kwargs):  # noqa: E501
+    def update_stream_metadata(
+        self, source_id, streams_update_list, **kwargs
+    ):  # noqa: E501
         """Updates the metadata for streams and fields. This endpoint is used to define the metadata properties returned in the Stream Schema object’s non-discoverable-metadata-keys property.   # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -278,10 +303,14 @@ class StreamsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        return self.update_stream_metadata_with_http_info(source_id, streams_update_list, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        return self.update_stream_metadata_with_http_info(
+            source_id, streams_update_list, **kwargs
+        )  # noqa: E501
 
-    def update_stream_metadata_with_http_info(self, source_id, streams_update_list, **kwargs):  # noqa: E501
+    def update_stream_metadata_with_http_info(
+        self, source_id, streams_update_list, **kwargs
+    ):  # noqa: E501
         """Updates the metadata for streams and fields. This endpoint is used to define the metadata properties returned in the Stream Schema object’s non-discoverable-metadata-keys property.   # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -308,34 +337,42 @@ class StreamsApi(object):
 
         local_var_params = locals()
 
-        all_params = ['source_id', 'streams_update_list']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["source_id", "streams_update_list"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
+        for key, val in six.iteritems(local_var_params["kwargs"]):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_stream_metadata" % key
                 )
             local_var_params[key] = val
-        del local_var_params['kwargs']
+        del local_var_params["kwargs"]
         # verify the required parameter 'source_id' is set
-        if self.api_client.client_side_validation and ('source_id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['source_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `source_id` when calling `update_stream_metadata`")  # noqa: E501
+        if self.api_client.client_side_validation and (
+            "source_id" not in local_var_params
+            or local_var_params["source_id"] is None  # noqa: E501
+        ):  # noqa: E501
+            raise ApiValueError(
+                "Missing the required parameter `source_id` when calling `update_stream_metadata`"
+            )  # noqa: E501
         # verify the required parameter 'streams_update_list' is set
-        if self.api_client.client_side_validation and ('streams_update_list' not in local_var_params or  # noqa: E501
-                                                        local_var_params['streams_update_list'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `streams_update_list` when calling `update_stream_metadata`")  # noqa: E501
+        if self.api_client.client_side_validation and (
+            "streams_update_list" not in local_var_params
+            or local_var_params["streams_update_list"] is None  # noqa: E501
+        ):  # noqa: E501
+            raise ApiValueError(
+                "Missing the required parameter `streams_update_list` when calling `update_stream_metadata`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'source_id' in local_var_params:
-            path_params['source_id'] = local_var_params['source_id']  # noqa: E501
+        if "source_id" in local_var_params:
+            path_params["source_id"] = local_var_params["source_id"]  # noqa: E501
 
         query_params = []
 
@@ -345,17 +382,21 @@ class StreamsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'streams_update_list' in local_var_params:
-            body_params = local_var_params['streams_update_list']
+        if "streams_update_list" in local_var_params:
+            body_params = local_var_params["streams_update_list"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params[
+            "Content-Type"
+        ] = self.api_client.select_header_content_type(  # noqa: E501
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['bearerAuth']  # noqa: E501
+        auth_settings = ["bearerAuth"]  # noqa: E501
 
         return self.api_client.call_api(
-            '/v4/sources/{source_id}/streams/metadata', 'PUT',
+            "/v4/sources/{source_id}/streams/metadata",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -364,8 +405,11 @@ class StreamsApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=local_var_params.get("async_req"),
+            _return_http_data_only=local_var_params.get(
+                "_return_http_data_only"
+            ),  # noqa: E501
+            _preload_content=local_var_params.get("_preload_content", True),
+            _request_timeout=local_var_params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )

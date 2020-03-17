@@ -23,7 +23,9 @@ class TestDestinationsApi(unittest.TestCase):
     """DestinationsApi unit test stubs"""
 
     def setUp(self):
-        self.api = stitch_connect_client.api.destinations_api.DestinationsApi()  # noqa: E501
+        self.api = (
+            stitch_connect_client.api.destinations_api.DestinationsApi()
+        )  # noqa: E501
 
     def tearDown(self):
         pass
@@ -64,5 +66,5 @@ class TestDestinationsApi(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

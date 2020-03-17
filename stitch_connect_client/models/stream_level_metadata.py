@@ -33,34 +33,48 @@ class StreamLevelMetadata(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'database_name': 'str',
-        'forced_replication_method': 'ForcedReplicationMethod',
-        'is_view': 'bool',
-        'replication_key': 'str',
-        'replication_method': 'str',
-        'row_count': 'int',
-        'schema_name': 'int',
-        'selected': 'bool',
-        'table_key_properties': 'list[str]',
-        'valid_replication_keys': 'list[str]',
-        'view_key_properties': 'list[str]'
+        "database_name": "str",
+        "forced_replication_method": "ForcedReplicationMethod",
+        "is_view": "bool",
+        "replication_key": "str",
+        "replication_method": "str",
+        "row_count": "int",
+        "schema_name": "int",
+        "selected": "bool",
+        "table_key_properties": "list[str]",
+        "valid_replication_keys": "list[str]",
+        "view_key_properties": "list[str]",
     }
 
     attribute_map = {
-        'database_name': 'database-name',
-        'forced_replication_method': 'forced-replication-method',
-        'is_view': 'is-view',
-        'replication_key': 'replication-key',
-        'replication_method': 'replication-method',
-        'row_count': 'row-count',
-        'schema_name': 'schema-name',
-        'selected': 'selected',
-        'table_key_properties': 'table-key-properties',
-        'valid_replication_keys': 'valid-replication-keys',
-        'view_key_properties': 'view-key-properties'
+        "database_name": "database-name",
+        "forced_replication_method": "forced-replication-method",
+        "is_view": "is-view",
+        "replication_key": "replication-key",
+        "replication_method": "replication-method",
+        "row_count": "row-count",
+        "schema_name": "schema-name",
+        "selected": "selected",
+        "table_key_properties": "table-key-properties",
+        "valid_replication_keys": "valid-replication-keys",
+        "view_key_properties": "view-key-properties",
     }
 
-    def __init__(self, database_name=None, forced_replication_method=None, is_view=None, replication_key=None, replication_method=None, row_count=None, schema_name=None, selected=None, table_key_properties=None, valid_replication_keys=None, view_key_properties=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(
+        self,
+        database_name=None,
+        forced_replication_method=None,
+        is_view=None,
+        replication_key=None,
+        replication_method=None,
+        row_count=None,
+        schema_name=None,
+        selected=None,
+        table_key_properties=None,
+        valid_replication_keys=None,
+        view_key_properties=None,
+        local_vars_configuration=None,
+    ):  # noqa: E501
         """StreamLevelMetadata - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -213,10 +227,14 @@ class StreamLevelMetadata(object):
         :type: str
         """
         allowed_values = ["FULL_TABLE", "INCREMENTAL", "LOG_BASED"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and replication_method not in allowed_values:  # noqa: E501
+        if (
+            self.local_vars_configuration.client_side_validation
+            and replication_method not in allowed_values
+        ):  # noqa: E501
             raise ValueError(
-                "Invalid value for `replication_method` ({0}), must be one of {1}"  # noqa: E501
-                .format(replication_method, allowed_values)
+                "Invalid value for `replication_method` ({0}), must be one of {1}".format(  # noqa: E501
+                    replication_method, allowed_values
+                )
             )
 
         self._replication_method = replication_method
@@ -366,18 +384,20 @@ class StreamLevelMetadata(object):
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if isinstance(value, list):
-                result[attr] = list(map(
-                    lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
-                    value
-                ))
+                result[attr] = list(
+                    map(lambda x: x.to_dict() if hasattr(x, "to_dict") else x, value)
+                )
             elif hasattr(value, "to_dict"):
                 result[attr] = value.to_dict()
             elif isinstance(value, dict):
-                result[attr] = dict(map(
-                    lambda item: (item[0], item[1].to_dict())
-                    if hasattr(item[1], "to_dict") else item,
-                    value.items()
-                ))
+                result[attr] = dict(
+                    map(
+                        lambda item: (item[0], item[1].to_dict())
+                        if hasattr(item[1], "to_dict")
+                        else item,
+                        value.items(),
+                    )
+                )
             else:
                 result[attr] = value
 

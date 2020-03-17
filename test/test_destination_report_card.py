@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import stitch_connect_client
-from stitch_connect_client.models.destination_report_card import DestinationReportCard  # noqa: E501
+from stitch_connect_client.models.destination_report_card import (  # noqa: E501
+    DestinationReportCard,
+)
 from stitch_connect_client.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestDestinationReportCard(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
