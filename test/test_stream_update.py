@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import stitch_connect_client
-from stitch_connect_client.models.streams_update import StreamsUpdate  # noqa: E501
+from stitch_connect_client.models.stream_update import StreamUpdate  # noqa: E501
 from stitch_connect_client.rest import ApiException
 
 
-class TestStreamsUpdate(unittest.TestCase):
-    """StreamsUpdate unit test stubs"""
+class TestStreamUpdate(unittest.TestCase):
+    """StreamUpdate unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,12 +28,12 @@ class TestStreamsUpdate(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testStreamsUpdate(self):
-        """Test StreamsUpdate"""
+    def testStreamUpdate(self):
+        """Test StreamUpdate"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = stitch_connect_client.models.streams_update.StreamsUpdate()  # noqa: E501
+        # model = stitch_connect_client.models.stream_update.StreamUpdate()  # noqa: E501
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

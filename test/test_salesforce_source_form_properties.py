@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import stitch_connect_client
-from stitch_connect_client.models.salesforce_source_form_properties import SalesforceSourceFormProperties  # noqa: E501
+from stitch_connect_client.models.salesforce_source_form_properties import (  # noqa: E501
+    SalesforceSourceFormProperties,
+)
 from stitch_connect_client.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestSalesforceSourceFormProperties(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import stitch_connect_client
-from stitch_connect_client.models.hook_notification import HookNotification  # noqa: E501
+from stitch_connect_client.models.hook_notification import (  # noqa: E501
+    HookNotification,
+)
 from stitch_connect_client.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestHookNotification(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

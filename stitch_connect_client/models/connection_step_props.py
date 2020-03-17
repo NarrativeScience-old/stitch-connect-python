@@ -33,24 +33,33 @@ class ConnectionStepProps(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'name': 'str',
-        'is_required': 'bool',
-        'is_credential': 'bool',
-        'property_type': 'str',
-        'json_schema': 'list[ConnectionStepPropsJsonSchema]',
-        'provided': 'bool'
+        "name": "str",
+        "is_required": "bool",
+        "is_credential": "bool",
+        "property_type": "str",
+        "json_schema": "list[ConnectionStepPropsJsonSchema]",
+        "provided": "bool",
     }
 
     attribute_map = {
-        'name': 'name',
-        'is_required': 'is_required',
-        'is_credential': 'is_credential',
-        'property_type': 'property_type',
-        'json_schema': 'json_schema',
-        'provided': 'provided'
+        "name": "name",
+        "is_required": "is_required",
+        "is_credential": "is_credential",
+        "property_type": "property_type",
+        "json_schema": "json_schema",
+        "provided": "provided",
     }
 
-    def __init__(self, name=None, is_required=None, is_credential=None, property_type=None, json_schema=None, provided=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(
+        self,
+        name=None,
+        is_required=None,
+        is_credential=None,
+        property_type=None,
+        json_schema=None,
+        provided=None,
+        local_vars_configuration=None,
+    ):  # noqa: E501
         """ConnectionStepProps - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -166,11 +175,20 @@ class ConnectionStepProps(object):
         :param property_type: The property_type of this ConnectionStepProps.  # noqa: E501
         :type: str
         """
-        allowed_values = ["user_provided", "read_only", "system_provided_by_default", "user_provided_immutable"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and property_type not in allowed_values:  # noqa: E501
+        allowed_values = [
+            "user_provided",
+            "read_only",
+            "system_provided_by_default",
+            "user_provided_immutable",
+        ]  # noqa: E501
+        if (
+            self.local_vars_configuration.client_side_validation
+            and property_type not in allowed_values
+        ):  # noqa: E501
             raise ValueError(
-                "Invalid value for `property_type` ({0}), must be one of {1}"  # noqa: E501
-                .format(property_type, allowed_values)
+                "Invalid value for `property_type` ({0}), must be one of {1}".format(  # noqa: E501
+                    property_type, allowed_values
+                )
             )
 
         self._property_type = property_type
@@ -228,18 +246,20 @@ class ConnectionStepProps(object):
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if isinstance(value, list):
-                result[attr] = list(map(
-                    lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
-                    value
-                ))
+                result[attr] = list(
+                    map(lambda x: x.to_dict() if hasattr(x, "to_dict") else x, value)
+                )
             elif hasattr(value, "to_dict"):
                 result[attr] = value.to_dict()
             elif isinstance(value, dict):
-                result[attr] = dict(map(
-                    lambda item: (item[0], item[1].to_dict())
-                    if hasattr(item[1], "to_dict") else item,
-                    value.items()
-                ))
+                result[attr] = dict(
+                    map(
+                        lambda item: (item[0], item[1].to_dict())
+                        if hasattr(item[1], "to_dict")
+                        else item,
+                        value.items(),
+                    )
+                )
             else:
                 result[attr] = value
 

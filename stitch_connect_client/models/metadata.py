@@ -32,17 +32,13 @@ class Metadata(object):
       attribute_map (dict): The key is attribute name
                             and the value is json key in definition.
     """
-    openapi_types = {
-        'breadcrumb': 'list[str]',
-        'metadata': 'MetadataObject'
-    }
+    openapi_types = {"breadcrumb": "list[str]", "metadata": "MetadataObject"}
 
-    attribute_map = {
-        'breadcrumb': 'breadcrumb',
-        'metadata': 'metadata'
-    }
+    attribute_map = {"breadcrumb": "breadcrumb", "metadata": "metadata"}
 
-    def __init__(self, breadcrumb=None, metadata=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(
+        self, breadcrumb=None, metadata=None, local_vars_configuration=None
+    ):  # noqa: E501
         """Metadata - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -75,8 +71,12 @@ class Metadata(object):
         :param breadcrumb: The breadcrumb of this Metadata.  # noqa: E501
         :type: list[str]
         """
-        if self.local_vars_configuration.client_side_validation and breadcrumb is None:  # noqa: E501
-            raise ValueError("Invalid value for `breadcrumb`, must not be `None`")  # noqa: E501
+        if (
+            self.local_vars_configuration.client_side_validation and breadcrumb is None
+        ):  # noqa: E501
+            raise ValueError(
+                "Invalid value for `breadcrumb`, must not be `None`"
+            )  # noqa: E501
 
         self._breadcrumb = breadcrumb
 
@@ -98,8 +98,12 @@ class Metadata(object):
         :param metadata: The metadata of this Metadata.  # noqa: E501
         :type: MetadataObject
         """
-        if self.local_vars_configuration.client_side_validation and metadata is None:  # noqa: E501
-            raise ValueError("Invalid value for `metadata`, must not be `None`")  # noqa: E501
+        if (
+            self.local_vars_configuration.client_side_validation and metadata is None
+        ):  # noqa: E501
+            raise ValueError(
+                "Invalid value for `metadata`, must not be `None`"
+            )  # noqa: E501
 
         self._metadata = metadata
 
@@ -110,18 +114,20 @@ class Metadata(object):
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if isinstance(value, list):
-                result[attr] = list(map(
-                    lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
-                    value
-                ))
+                result[attr] = list(
+                    map(lambda x: x.to_dict() if hasattr(x, "to_dict") else x, value)
+                )
             elif hasattr(value, "to_dict"):
                 result[attr] = value.to_dict()
             elif isinstance(value, dict):
-                result[attr] = dict(map(
-                    lambda item: (item[0], item[1].to_dict())
-                    if hasattr(item[1], "to_dict") else item,
-                    value.items()
-                ))
+                result[attr] = dict(
+                    map(
+                        lambda item: (item[0], item[1].to_dict())
+                        if hasattr(item[1], "to_dict")
+                        else item,
+                        value.items(),
+                    )
+                )
             else:
                 result[attr] = value
 

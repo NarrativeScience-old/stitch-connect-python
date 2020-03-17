@@ -32,17 +32,13 @@ class ConnectionStep(object):
       attribute_map (dict): The key is attribute name
                             and the value is json key in definition.
     """
-    openapi_types = {
-        'type': 'str',
-        'properties': 'list[ConnectionStepProps]'
-    }
+    openapi_types = {"type": "str", "properties": "list[ConnectionStepProps]"}
 
-    attribute_map = {
-        'type': 'type',
-        'properties': 'properties'
-    }
+    attribute_map = {"type": "type", "properties": "properties"}
 
-    def __init__(self, type=None, properties=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(
+        self, type=None, properties=None, local_vars_configuration=None
+    ):  # noqa: E501
         """ConnectionStep - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -77,11 +73,22 @@ class ConnectionStep(object):
         :param type: The type of this ConnectionStep.  # noqa: E501
         :type: str
         """
-        allowed_values = ["form", "oauth", "profile", "discover_schema", "field_selection", "fully_configured"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and type not in allowed_values:  # noqa: E501
+        allowed_values = [
+            "form",
+            "oauth",
+            "profile",
+            "discover_schema",
+            "field_selection",
+            "fully_configured",
+        ]  # noqa: E501
+        if (
+            self.local_vars_configuration.client_side_validation
+            and type not in allowed_values
+        ):  # noqa: E501
             raise ValueError(
-                "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
-                .format(type, allowed_values)
+                "Invalid value for `type` ({0}), must be one of {1}".format(  # noqa: E501
+                    type, allowed_values
+                )
             )
 
         self._type = type
@@ -116,18 +123,20 @@ class ConnectionStep(object):
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if isinstance(value, list):
-                result[attr] = list(map(
-                    lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
-                    value
-                ))
+                result[attr] = list(
+                    map(lambda x: x.to_dict() if hasattr(x, "to_dict") else x, value)
+                )
             elif hasattr(value, "to_dict"):
                 result[attr] = value.to_dict()
             elif isinstance(value, dict):
-                result[attr] = dict(map(
-                    lambda item: (item[0], item[1].to_dict())
-                    if hasattr(item[1], "to_dict") else item,
-                    value.items()
-                ))
+                result[attr] = dict(
+                    map(
+                        lambda item: (item[0], item[1].to_dict())
+                        if hasattr(item[1], "to_dict")
+                        else item,
+                        value.items(),
+                    )
+                )
             else:
                 result[attr] = value
 

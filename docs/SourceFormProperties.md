@@ -1,6 +1,6 @@
 # SourceFormProperties
 
-Parameters for connecting to the source, excluding any sensitive credentials. The parameters must adhere to the type of source. 
+Parameters for connecting to the source, excluding any sensitive credentials. The parameters must adhere to the type of source.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

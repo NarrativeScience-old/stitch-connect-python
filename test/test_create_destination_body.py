@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import stitch_connect_client
-from stitch_connect_client.models.create_destination_body import CreateDestinationBody  # noqa: E501
+from stitch_connect_client.models.create_destination_body import (  # noqa: E501
+    CreateDestinationBody,
+)
 from stitch_connect_client.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestCreateDestinationBody(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

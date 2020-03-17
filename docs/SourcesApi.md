@@ -4,19 +4,19 @@ All URIs are relative to *https://api.stitchdata.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_source**](SourcesApi.md#create_source) | **POST** /v4/sources | Creates a source object, which is the first step in setting up a new data source. After the source object is created, additional configuration steps must be completed. 
+[**create_source**](SourcesApi.md#create_source) | **POST** /v4/sources | Creates a source object, which is the first step in setting up a new data source. After the source object is created, additional configuration steps must be completed.
 [**delete_source**](SourcesApi.md#delete_source) | **DELETE** /v4/sources/{source_id} | Deletes an existing data source.
-[**get_last_connection_check**](SourcesApi.md#get_last_connection_check) | **GET** /v4/sources/{source_id}/last-connection-check | Retrieves the last connection check for a source by the source’s unique identifier. 
-[**get_source**](SourcesApi.md#get_source) | **GET** /v4/sources/{source_id} | Retrieves a previously created data source by its unique identifier. This endpoint can be used to retrieve an active, paused, or deleted source. 
-[**get_sources**](SourcesApi.md#get_sources) | **GET** /v4/sources | Lists the sources for an account, including active, paused, and deleted sources. 
-[**start_replication**](SourcesApi.md#start_replication) | **POST** /v4/sources/{source_id}/sync | Manually starts a replication job for a source using the source’s unique identifier. 
+[**get_last_connection_check**](SourcesApi.md#get_last_connection_check) | **GET** /v4/sources/{source_id}/last-connection-check | Retrieves the last connection check for a source by the source’s unique identifier.
+[**get_source**](SourcesApi.md#get_source) | **GET** /v4/sources/{source_id} | Retrieves a previously created data source by its unique identifier. This endpoint can be used to retrieve an active, paused, or deleted source.
+[**get_sources**](SourcesApi.md#get_sources) | **GET** /v4/sources | Lists the sources for an account, including active, paused, and deleted sources.
+[**start_replication**](SourcesApi.md#start_replication) | **POST** /v4/sources/{source_id}/sync | Manually starts a replication job for a source using the source’s unique identifier.
 [**update_source**](SourcesApi.md#update_source) | **PUT** /v4/sources/{source_id} | Updates an existing data source.
 
 
 # **create_source**
 > Source create_source(create_source_body)
 
-Creates a source object, which is the first step in setting up a new data source. After the source object is created, additional configuration steps must be completed. 
+Creates a source object, which is the first step in setting up a new data source. After the source object is created, additional configuration steps must be completed.
 
 ### Example
 
@@ -38,7 +38,7 @@ api_instance = stitch_connect_client.SourcesApi(stitch_connect_client.ApiClient(
 create_source_body = stitch_connect_client.CreateSourceBody() # CreateSourceBody | Request body to create a new source
 
 try:
-    # Creates a source object, which is the first step in setting up a new data source. After the source object is created, additional configuration steps must be completed. 
+    # Creates a source object, which is the first step in setting up a new data source. After the source object is created, additional configuration steps must be completed.
     api_response = api_instance.create_source(create_source_body)
     pprint(api_response)
 except ApiException as e:
@@ -49,7 +49,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_source_body** | [**CreateSourceBody**](CreateSourceBody.md)| Request body to create a new source | 
+ **create_source_body** | [**CreateSourceBody**](CreateSourceBody.md)| Request body to create a new source |
 
 ### Return type
 
@@ -108,7 +108,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **source_id** | **str**| The ID of the source | 
+ **source_id** | **str**| The ID of the source |
 
 ### Return type
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 # **get_last_connection_check**
 > ConnectionCheck get_last_connection_check(source_id)
 
-Retrieves the last connection check for a source by the source’s unique identifier. 
+Retrieves the last connection check for a source by the source’s unique identifier.
 
 ### Example
 
@@ -155,7 +155,7 @@ api_instance = stitch_connect_client.SourcesApi(stitch_connect_client.ApiClient(
 source_id = 'source_id_example' # str | The ID of the source
 
 try:
-    # Retrieves the last connection check for a source by the source’s unique identifier. 
+    # Retrieves the last connection check for a source by the source’s unique identifier.
     api_response = api_instance.get_last_connection_check(source_id)
     pprint(api_response)
 except ApiException as e:
@@ -166,7 +166,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **source_id** | **str**| The ID of the source | 
+ **source_id** | **str**| The ID of the source |
 
 ### Return type
 
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 # **get_source**
 > Source get_source(source_id)
 
-Retrieves a previously created data source by its unique identifier. This endpoint can be used to retrieve an active, paused, or deleted source. 
+Retrieves a previously created data source by its unique identifier. This endpoint can be used to retrieve an active, paused, or deleted source.
 
 ### Example
 
@@ -213,7 +213,7 @@ api_instance = stitch_connect_client.SourcesApi(stitch_connect_client.ApiClient(
 source_id = 'source_id_example' # str | The ID of the source
 
 try:
-    # Retrieves a previously created data source by its unique identifier. This endpoint can be used to retrieve an active, paused, or deleted source. 
+    # Retrieves a previously created data source by its unique identifier. This endpoint can be used to retrieve an active, paused, or deleted source.
     api_response = api_instance.get_source(source_id)
     pprint(api_response)
 except ApiException as e:
@@ -224,7 +224,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **source_id** | **str**| The ID of the source | 
+ **source_id** | **str**| The ID of the source |
 
 ### Return type
 
@@ -249,7 +249,7 @@ Name | Type | Description  | Notes
 # **get_sources**
 > list[Source] get_sources()
 
-Lists the sources for an account, including active, paused, and deleted sources. 
+Lists the sources for an account, including active, paused, and deleted sources.
 
 ### Example
 
@@ -270,7 +270,7 @@ configuration.host = "https://api.stitchdata.com"
 api_instance = stitch_connect_client.SourcesApi(stitch_connect_client.ApiClient(configuration))
 
 try:
-    # Lists the sources for an account, including active, paused, and deleted sources. 
+    # Lists the sources for an account, including active, paused, and deleted sources.
     api_response = api_instance.get_sources()
     pprint(api_response)
 except ApiException as e:
@@ -303,7 +303,7 @@ This endpoint does not need any parameter.
 # **start_replication**
 > ErrorObject start_replication(source_id)
 
-Manually starts a replication job for a source using the source’s unique identifier. 
+Manually starts a replication job for a source using the source’s unique identifier.
 
 ### Example
 
@@ -325,7 +325,7 @@ api_instance = stitch_connect_client.SourcesApi(stitch_connect_client.ApiClient(
 source_id = 'source_id_example' # str | The ID of the source
 
 try:
-    # Manually starts a replication job for a source using the source’s unique identifier. 
+    # Manually starts a replication job for a source using the source’s unique identifier.
     api_response = api_instance.start_replication(source_id)
     pprint(api_response)
 except ApiException as e:
@@ -336,7 +336,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **source_id** | **str**| The ID of the source | 
+ **source_id** | **str**| The ID of the source |
 
 ### Return type
 
@@ -396,8 +396,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **source_id** | **str**| The ID of the source | 
- **update_source_body** | [**UpdateSourceBody**](UpdateSourceBody.md)| Request body for updating a source | 
+ **source_id** | **str**| The ID of the source |
+ **update_source_body** | [**UpdateSourceBody**](UpdateSourceBody.md)| Request body for updating a source |
 
 ### Return type
 
