@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import foo_package
-from foo_package.models.stream_update import StreamUpdate  # noqa: E501
-from foo_package.rest import ApiException
+import stitch_connect_client
+from stitch_connect_client.models.stream_update import StreamUpdate  # noqa: E501
+from stitch_connect_client.rest import ApiException
 
 
 class TestStreamUpdate(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestStreamUpdate(unittest.TestCase):
     def testStreamUpdate(self):
         """Test StreamUpdate"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = foo_package.models.stream_update.StreamUpdate()  # noqa: E501
+        # model = stitch_connect_client.models.stream_update.StreamUpdate()  # noqa: E501
         pass
 
 
