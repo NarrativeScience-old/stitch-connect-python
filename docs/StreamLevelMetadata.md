@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **table_key_properties** | **list[str]** | An array of strings listing the fields that make up the key properties of the table. These are the table’s defined Primary Keys.  | [optional]
 **valid_replication_keys** | **list[str]** | An array of strings indicating the fields valid for use as Replication Keys in Key-based Incremental Replication (replication-method: INCREMENTAL). Note: For SaaS sources, the fields listed in this array are pre-defined by Stitch and will be used as the Replication Keys for the stream. They cannot be modified.  | [optional]
 **view_key_properties** | **list[str]** | For database sources only. An array of strings listing the fields that make up the key properties of the view.  | [optional]
+**tap_google_analytics_all_cubes** | **list[str]** | For Google Analytics sources only. An array of strings listing all the ‘cubes’ available in the Google Analytics source. A cube is a group of metrics and dimensions that are compatible together.  | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
