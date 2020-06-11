@@ -43,6 +43,12 @@ from stitch_connect_client.models.forced_replication_method import (
 from stitch_connect_client.models.forced_replication_method_object import (
     ForcedReplicationMethodObject,
 )
+from stitch_connect_client.models.google_analytics_source_form_properties import (
+    GoogleAnalyticsSourceFormProperties,
+)
+from stitch_connect_client.models.google_analytics_source_form_properties_report_definitions import (
+    GoogleAnalyticsSourceFormPropertiesReportDefinitions,
+)
 from stitch_connect_client.models.hook_notification import HookNotification
 from stitch_connect_client.models.hook_notification_config import HookNotificationConfig
 from stitch_connect_client.models.metadata import Metadata

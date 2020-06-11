@@ -44,6 +44,7 @@ class StreamLevelMetadata(object):
         "table_key_properties": "list[str]",
         "valid_replication_keys": "list[str]",
         "view_key_properties": "list[str]",
+        "tap_google_analytics_all_cubes": "list[str]",
     }
 
     attribute_map = {
@@ -58,6 +59,7 @@ class StreamLevelMetadata(object):
         "table_key_properties": "table-key-properties",
         "valid_replication_keys": "valid-replication-keys",
         "view_key_properties": "view-key-properties",
+        "tap_google_analytics_all_cubes": "tap_google_analytics.all_cubes",
     }
 
     def __init__(
@@ -73,6 +75,7 @@ class StreamLevelMetadata(object):
         table_key_properties=None,
         valid_replication_keys=None,
         view_key_properties=None,
+        tap_google_analytics_all_cubes=None,
         local_vars_configuration=None,
     ):  # noqa: E501
         """StreamLevelMetadata - a model defined in OpenAPI"""  # noqa: E501
@@ -91,6 +94,7 @@ class StreamLevelMetadata(object):
         self._table_key_properties = None
         self._valid_replication_keys = None
         self._view_key_properties = None
+        self._tap_google_analytics_all_cubes = None
         self.discriminator = None
 
         if database_name is not None:
@@ -115,6 +119,8 @@ class StreamLevelMetadata(object):
             self.valid_replication_keys = valid_replication_keys
         if view_key_properties is not None:
             self.view_key_properties = view_key_properties
+        if tap_google_analytics_all_cubes is not None:
+            self.tap_google_analytics_all_cubes = tap_google_analytics_all_cubes
 
     @property
     def database_name(self):
@@ -376,6 +382,29 @@ class StreamLevelMetadata(object):
         """
 
         self._view_key_properties = view_key_properties
+
+    @property
+    def tap_google_analytics_all_cubes(self):
+        """Gets the tap_google_analytics_all_cubes of this StreamLevelMetadata.  # noqa: E501
+
+        For Google Analytics sources only. An array of strings listing all the ‘cubes’ available in the Google Analytics source. A cube is a group of metrics and dimensions that are compatible together.   # noqa: E501
+
+        :return: The tap_google_analytics_all_cubes of this StreamLevelMetadata.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._tap_google_analytics_all_cubes
+
+    @tap_google_analytics_all_cubes.setter
+    def tap_google_analytics_all_cubes(self, tap_google_analytics_all_cubes):
+        """Sets the tap_google_analytics_all_cubes of this StreamLevelMetadata.
+
+        For Google Analytics sources only. An array of strings listing all the ‘cubes’ available in the Google Analytics source. A cube is a group of metrics and dimensions that are compatible together.   # noqa: E501
+
+        :param tap_google_analytics_all_cubes: The tap_google_analytics_all_cubes of this StreamLevelMetadata.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._tap_google_analytics_all_cubes = tap_google_analytics_all_cubes
 
     def to_dict(self):
         """Returns the model properties as a dict"""
