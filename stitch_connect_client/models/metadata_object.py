@@ -51,7 +51,7 @@ class MetadataObject(object):
         "field_exclusions": "object",
         "unsupported_description": "str",
         "tap_google_analytics_cubes": "list[str]",
-        "tap_google_analytics_group": "list[str]",
+        "tap_google_analytics_group": "str",
         "behavior": "str",
     }
 
@@ -609,7 +609,7 @@ class MetadataObject(object):
         For Google Analytics sources only. The group the field belongs to. Possible values are: - Ad Exchange - Adsense - Adwords - App Tracking - Audience - Channel Grouping - Content Experiments - Content Grouping - Custom Variables or Columns - DoubleClick Bid Manager - DoubleClick Campaign Manager - DoubleClick Search - DoubleClick for Publishers - DoubleClick for Publishers Backfill - Ecommerce - Event Tracking - Exceptions - Geo Network - Goal Conversions - Internal Search - Lifetime Value and Cohorts - Page Tracking - Platform or Device - Publisher - Report Fields - Session - Site Speed - Social Activities - Social Interactions - System - Time - Traffic Sources - User - User Timings   # noqa: E501
 
         :return: The tap_google_analytics_group of this MetadataObject.  # noqa: E501
-        :rtype: list[str]
+        :rtype: str
         """
         return self._tap_google_analytics_group
 
@@ -620,7 +620,7 @@ class MetadataObject(object):
         For Google Analytics sources only. The group the field belongs to. Possible values are: - Ad Exchange - Adsense - Adwords - App Tracking - Audience - Channel Grouping - Content Experiments - Content Grouping - Custom Variables or Columns - DoubleClick Bid Manager - DoubleClick Campaign Manager - DoubleClick Search - DoubleClick for Publishers - DoubleClick for Publishers Backfill - Ecommerce - Event Tracking - Exceptions - Geo Network - Goal Conversions - Internal Search - Lifetime Value and Cohorts - Page Tracking - Platform or Device - Publisher - Report Fields - Session - Site Speed - Social Activities - Social Interactions - System - Time - Traffic Sources - User - User Timings   # noqa: E501
 
         :param tap_google_analytics_group: The tap_google_analytics_group of this MetadataObject.  # noqa: E501
-        :type: list[str]
+        :type: str
         """
 
         self._tap_google_analytics_group = tap_google_analytics_group
