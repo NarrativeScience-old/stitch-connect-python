@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **frequency_in_minutes** | **str** | Defines how often, in minutes, Stitch should attempt to replicate data from Google Analytics. Accepted values are: - 30 - 60 - 360 - 720 - 1440  | [optional]
 **quota_user** | **str** | Note: This is a read-only property and will be returned when the Google Analytics object is successfully created. Including it in POST or PUT requests will result in InvalidProperties errors.  | [optional]
 **refresh_token** | **str** | The OAuth 2.0 refresh token used to access the Google API. | [optional]
-**report_definitions** | [**list[GoogleAnalyticsSourceFormPropertiesReportDefinitions]**](GoogleAnalyticsSourceFormPropertiesReportDefinitions.md) | An array of objects, each object pertaining to a custom report you want to create. Note: Metrics and dimensions for each report can be selected when the source proceeds to the field_selection step.  |
-**start_date** | **str** | The date from which Stitch should begin replicating data from Salesforce. Data from this date forward will be replicated. This field must contain an ISO 8601-compliant date, and the timestamp must be midnight. For example: 2018-01-01T00:00:00Z  |
+**report_definitions** | [**list[GoogleAnalyticsSourceFormPropertiesReportDefinitions]**](GoogleAnalyticsSourceFormPropertiesReportDefinitions.md) | An array of objects, each object pertaining to a custom report you want to create. Note: Metrics and dimensions for each report can be selected when the source proceeds to the field_selection step.  | [optional]
+**start_date** | **str** | The date from which Stitch should begin replicating data from Salesforce. Data from this date forward will be replicated. This field must contain an ISO 8601-compliant date, and the timestamp must be midnight. For example: 2018-01-01T00:00:00Z  | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -103,14 +103,16 @@ class SalesforceSourceFormProperties(object):
 
         if anchor_time is not None:
             self.anchor_time = anchor_time
-        self.api_type = api_type
+        if api_type is not None:
+            self.api_type = api_type
         if client_id is not None:
             self.client_id = client_id
         if client_secret is not None:
             self.client_secret = client_secret
         if cron_expression is not None:
             self.cron_expression = cron_expression
-        self.frequency_in_minutes = frequency_in_minutes
+        if frequency_in_minutes is not None:
+            self.frequency_in_minutes = frequency_in_minutes
         if instance_url is not None:
             self.instance_url = instance_url
         if is_sandbox is not None:
@@ -121,8 +123,10 @@ class SalesforceSourceFormProperties(object):
             self.quota_percent_total = quota_percent_total
         if refresh_token is not None:
             self.refresh_token = refresh_token
-        self.select_fields_by_default = select_fields_by_default
-        self.start_date = start_date
+        if select_fields_by_default is not None:
+            self.select_fields_by_default = select_fields_by_default
+        if start_date is not None:
+            self.start_date = start_date
 
     @property
     def anchor_time(self):
@@ -167,12 +171,6 @@ class SalesforceSourceFormProperties(object):
         :param api_type: The api_type of this SalesforceSourceFormProperties.  # noqa: E501
         :type: str
         """
-        if (
-            self.local_vars_configuration.client_side_validation and api_type is None
-        ):  # noqa: E501
-            raise ValueError(
-                "Invalid value for `api_type`, must not be `None`"
-            )  # noqa: E501
 
         self._api_type = api_type
 
@@ -265,13 +263,6 @@ class SalesforceSourceFormProperties(object):
         :param frequency_in_minutes: The frequency_in_minutes of this SalesforceSourceFormProperties.  # noqa: E501
         :type: str
         """
-        if (
-            self.local_vars_configuration.client_side_validation
-            and frequency_in_minutes is None
-        ):  # noqa: E501
-            raise ValueError(
-                "Invalid value for `frequency_in_minutes`, must not be `None`"
-            )  # noqa: E501
 
         self._frequency_in_minutes = frequency_in_minutes
 
@@ -410,13 +401,6 @@ class SalesforceSourceFormProperties(object):
         :param select_fields_by_default: The select_fields_by_default of this SalesforceSourceFormProperties.  # noqa: E501
         :type: str
         """
-        if (
-            self.local_vars_configuration.client_side_validation
-            and select_fields_by_default is None
-        ):  # noqa: E501
-            raise ValueError(
-                "Invalid value for `select_fields_by_default`, must not be `None`"
-            )  # noqa: E501
 
         self._select_fields_by_default = select_fields_by_default
 
@@ -440,12 +424,6 @@ class SalesforceSourceFormProperties(object):
         :param start_date: The start_date of this SalesforceSourceFormProperties.  # noqa: E501
         :type: str
         """
-        if (
-            self.local_vars_configuration.client_side_validation and start_date is None
-        ):  # noqa: E501
-            raise ValueError(
-                "Invalid value for `start_date`, must not be `None`"
-            )  # noqa: E501
 
         self._start_date = start_date
 

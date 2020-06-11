@@ -99,8 +99,10 @@ class GoogleAnalyticsSourceFormProperties(object):
             self.quota_user = quota_user
         if refresh_token is not None:
             self.refresh_token = refresh_token
-        self.report_definitions = report_definitions
-        self.start_date = start_date
+        if report_definitions is not None:
+            self.report_definitions = report_definitions
+        if start_date is not None:
+            self.start_date = start_date
 
     @property
     def anchor_time(self):
@@ -283,13 +285,6 @@ class GoogleAnalyticsSourceFormProperties(object):
         :param report_definitions: The report_definitions of this GoogleAnalyticsSourceFormProperties.  # noqa: E501
         :type: list[GoogleAnalyticsSourceFormPropertiesReportDefinitions]
         """
-        if (
-            self.local_vars_configuration.client_side_validation
-            and report_definitions is None
-        ):  # noqa: E501
-            raise ValueError(
-                "Invalid value for `report_definitions`, must not be `None`"
-            )  # noqa: E501
 
         self._report_definitions = report_definitions
 
@@ -313,12 +308,6 @@ class GoogleAnalyticsSourceFormProperties(object):
         :param start_date: The start_date of this GoogleAnalyticsSourceFormProperties.  # noqa: E501
         :type: str
         """
-        if (
-            self.local_vars_configuration.client_side_validation and start_date is None
-        ):  # noqa: E501
-            raise ValueError(
-                "Invalid value for `start_date`, must not be `None`"
-            )  # noqa: E501
 
         self._start_date = start_date
 
