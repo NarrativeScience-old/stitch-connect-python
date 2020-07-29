@@ -241,7 +241,7 @@ class MetadataObject(object):
     def replication_key(self):
         """Gets the replication_key of this MetadataObject.  # noqa: E501
 
-        Indicates the field being used as the stream’s Replication Key.   # noqa: E501
+        Indicates the field being used as the stream's Replication Key.   # noqa: E501
 
         :return: The replication_key of this MetadataObject.  # noqa: E501
         :rtype: str
@@ -252,7 +252,7 @@ class MetadataObject(object):
     def replication_key(self, replication_key):
         """Sets the replication_key of this MetadataObject.
 
-        Indicates the field being used as the stream’s Replication Key.   # noqa: E501
+        Indicates the field being used as the stream's Replication Key.   # noqa: E501
 
         :param replication_key: The replication_key of this MetadataObject.  # noqa: E501
         :type: str
@@ -343,7 +343,7 @@ class MetadataObject(object):
     def selected(self):
         """Gets the selected of this MetadataObject.  # noqa: E501
 
-        Indicates whether a field should be included in a stream’s field selection list. This value will be present only if the stream containing the field is selected (selected: true). null - The value has not been set true - The field is selected false - The field is not selected   # noqa: E501
+        Indicates whether a field should be included in a stream's field selection list. This value will be present only if the stream containing the field is selected (selected: true). null - The value has not been set true - The field is selected false - The field is not selected   # noqa: E501
 
         :return: The selected of this MetadataObject.  # noqa: E501
         :rtype: bool
@@ -354,7 +354,7 @@ class MetadataObject(object):
     def selected(self, selected):
         """Sets the selected of this MetadataObject.
 
-        Indicates whether a field should be included in a stream’s field selection list. This value will be present only if the stream containing the field is selected (selected: true). null - The value has not been set true - The field is selected false - The field is not selected   # noqa: E501
+        Indicates whether a field should be included in a stream's field selection list. This value will be present only if the stream containing the field is selected (selected: true). null - The value has not been set true - The field is selected false - The field is not selected   # noqa: E501
 
         :param selected: The selected of this MetadataObject.  # noqa: E501
         :type: bool
@@ -366,7 +366,7 @@ class MetadataObject(object):
     def table_key_properties(self):
         """Gets the table_key_properties of this MetadataObject.  # noqa: E501
 
-        An array of strings listing the fields that make up the key properties of the table. These are the table’s defined Primary Keys.   # noqa: E501
+        An array of strings listing the fields that make up the key properties of the table. These are the table's defined Primary Keys.   # noqa: E501
 
         :return: The table_key_properties of this MetadataObject.  # noqa: E501
         :rtype: list[str]
@@ -377,7 +377,7 @@ class MetadataObject(object):
     def table_key_properties(self, table_key_properties):
         """Sets the table_key_properties of this MetadataObject.
 
-        An array of strings listing the fields that make up the key properties of the table. These are the table’s defined Primary Keys.   # noqa: E501
+        An array of strings listing the fields that make up the key properties of the table. These are the table's defined Primary Keys.   # noqa: E501
 
         :param table_key_properties: The table_key_properties of this MetadataObject.  # noqa: E501
         :type: list[str]
@@ -435,7 +435,7 @@ class MetadataObject(object):
     def tap_google_analytics_all_cubes(self):
         """Gets the tap_google_analytics_all_cubes of this MetadataObject.  # noqa: E501
 
-        For Google Analytics sources only. An array of strings listing all the ‘cubes’ available in the Google Analytics source. A cube is a group of metrics and dimensions that are compatible together.   # noqa: E501
+        For Google Analytics sources only. An array of strings listing all the ‘cubes' available in the Google Analytics source. A cube is a group of metrics and dimensions that are compatible together.   # noqa: E501
 
         :return: The tap_google_analytics_all_cubes of this MetadataObject.  # noqa: E501
         :rtype: list[str]
@@ -446,7 +446,7 @@ class MetadataObject(object):
     def tap_google_analytics_all_cubes(self, tap_google_analytics_all_cubes):
         """Sets the tap_google_analytics_all_cubes of this MetadataObject.
 
-        For Google Analytics sources only. An array of strings listing all the ‘cubes’ available in the Google Analytics source. A cube is a group of metrics and dimensions that are compatible together.   # noqa: E501
+        For Google Analytics sources only. An array of strings listing all the ‘cubes' available in the Google Analytics source. A cube is a group of metrics and dimensions that are compatible together.   # noqa: E501
 
         :param tap_google_analytics_all_cubes: The tap_google_analytics_all_cubes of this MetadataObject.  # noqa: E501
         :type: list[str]
@@ -583,7 +583,7 @@ class MetadataObject(object):
     def tap_google_analytics_cubes(self):
         """Gets the tap_google_analytics_cubes of this MetadataObject.  # noqa: E501
 
-        For Google Analytics sources only. An array of strings containing the ‘cubes’ the field is a part of. A cube is a group of metrics and dimensions that are compatible together.   # noqa: E501
+        For Google Analytics sources only. An array of strings containing the ‘cubes' the field is a part of. A cube is a group of metrics and dimensions that are compatible together.   # noqa: E501
 
         :return: The tap_google_analytics_cubes of this MetadataObject.  # noqa: E501
         :rtype: list[str]
@@ -594,7 +594,7 @@ class MetadataObject(object):
     def tap_google_analytics_cubes(self, tap_google_analytics_cubes):
         """Sets the tap_google_analytics_cubes of this MetadataObject.
 
-        For Google Analytics sources only. An array of strings containing the ‘cubes’ the field is a part of. A cube is a group of metrics and dimensions that are compatible together.   # noqa: E501
+        For Google Analytics sources only. An array of strings containing the ‘cubes' the field is a part of. A cube is a group of metrics and dimensions that are compatible together.   # noqa: E501
 
         :param tap_google_analytics_cubes: The tap_google_analytics_cubes of this MetadataObject.  # noqa: E501
         :type: list[str]
@@ -629,7 +629,7 @@ class MetadataObject(object):
     def behavior(self):
         """Gets the behavior of this MetadataObject.  # noqa: E501
 
-        For Google Analytics and Google Ads sources only. The type of field. Possible values are: - ATTRIBUTE - Goolgle Ads sources only - METRIC - DIMENSION - Google Analytics sources only - SEGMENT - Goolgle Ads sources only Note: This property won’t be present for Google Analytics fields where tap_google_analytics.group: Report Fields.   # noqa: E501
+        For Google Analytics and Google Ads sources only. The type of field. Possible values are: - ATTRIBUTE - Goolgle Ads sources only - METRIC - DIMENSION - Google Analytics sources only - SEGMENT - Goolgle Ads sources only Note: This property won't be present for Google Analytics fields where tap_google_analytics.group: Report Fields.   # noqa: E501
 
         :return: The behavior of this MetadataObject.  # noqa: E501
         :rtype: str
@@ -640,7 +640,7 @@ class MetadataObject(object):
     def behavior(self, behavior):
         """Sets the behavior of this MetadataObject.
 
-        For Google Analytics and Google Ads sources only. The type of field. Possible values are: - ATTRIBUTE - Goolgle Ads sources only - METRIC - DIMENSION - Google Analytics sources only - SEGMENT - Goolgle Ads sources only Note: This property won’t be present for Google Analytics fields where tap_google_analytics.group: Report Fields.   # noqa: E501
+        For Google Analytics and Google Ads sources only. The type of field. Possible values are: - ATTRIBUTE - Goolgle Ads sources only - METRIC - DIMENSION - Google Analytics sources only - SEGMENT - Goolgle Ads sources only Note: This property won't be present for Google Analytics fields where tap_google_analytics.group: Report Fields.   # noqa: E501
 
         :param behavior: The behavior of this MetadataObject.  # noqa: E501
         :type: str

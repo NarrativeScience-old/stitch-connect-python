@@ -4,7 +4,7 @@ A Stream Schema object contains information needed to select a stream and its fi
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**schema** | **str** | The JSON schema describing the stream’s fields. | [optional]
+**schema** | **str** | The JSON schema describing the stream&#39;s fields. | [optional]
 **metadata** | [**list[Metadata]**](Metadata.md) | An array of Metadata objects. | [optional]
 **non_discoverable_metadata_keys** | **list[str]** | An array of strings corresponding to &#x60;metadata&#x60; keys that can be modified.  | [optional]
 

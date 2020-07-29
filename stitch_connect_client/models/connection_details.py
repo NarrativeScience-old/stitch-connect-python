@@ -90,7 +90,7 @@ class ConnectionDetails(object):
     def access(self):
         """Gets the access of this ConnectionDetails.  # noqa: E501
 
-        Indicates whether the Stitch client who made the request has access to the connection. This value is based on the connection’s pricing_tier and pipeline_state. If the Stitch client is using a plan that doesn’t meet the pricing_tier requirement, the access value will be false. For example: If pricing_tier: enterprise,the Stitch client must be on an Enterprise plan to access the source. All connections with a pipeline_state value of deprecated will also have an access value of false.   # noqa: E501
+        Indicates whether the Stitch client who made the request has access to the connection. This value is based on the connection's pricing_tier and pipeline_state. If the Stitch client is using a plan that doesn't meet the pricing_tier requirement, the access value will be false. For example: If pricing_tier: enterprise,the Stitch client must be on an Enterprise plan to access the source. All connections with a pipeline_state value of deprecated will also have an access value of false.   # noqa: E501
 
         :return: The access of this ConnectionDetails.  # noqa: E501
         :rtype: bool
@@ -101,7 +101,7 @@ class ConnectionDetails(object):
     def access(self, access):
         """Sets the access of this ConnectionDetails.
 
-        Indicates whether the Stitch client who made the request has access to the connection. This value is based on the connection’s pricing_tier and pipeline_state. If the Stitch client is using a plan that doesn’t meet the pricing_tier requirement, the access value will be false. For example: If pricing_tier: enterprise,the Stitch client must be on an Enterprise plan to access the source. All connections with a pipeline_state value of deprecated will also have an access value of false.   # noqa: E501
+        Indicates whether the Stitch client who made the request has access to the connection. This value is based on the connection's pricing_tier and pipeline_state. If the Stitch client is using a plan that doesn't meet the pricing_tier requirement, the access value will be false. For example: If pricing_tier: enterprise,the Stitch client must be on an Enterprise plan to access the source. All connections with a pipeline_state value of deprecated will also have an access value of false.   # noqa: E501
 
         :param access: The access of this ConnectionDetails.  # noqa: E501
         :type: bool
@@ -192,7 +192,7 @@ class ConnectionDetails(object):
     def pipeline_state(self):
         """Gets the pipeline_state of this ConnectionDetails.  # noqa: E501
 
-        The connection type’s release status in Stitch. Possible values are: alpha - The connection is in development and is not available in Stitch. beta - The connection is in open or closed beta and is available in Stitch. released - The connection is in general release and available in Stitch. deprecated - The connection has been deprecated and is no longer available in Stitch.   # noqa: E501
+        The connection type's release status in Stitch. Possible values are: alpha - The connection is in development and is not available in Stitch. beta - The connection is in open or closed beta and is available in Stitch. released - The connection is in general release and available in Stitch. deprecated - The connection has been deprecated and is no longer available in Stitch.   # noqa: E501
 
         :return: The pipeline_state of this ConnectionDetails.  # noqa: E501
         :rtype: str
@@ -203,7 +203,7 @@ class ConnectionDetails(object):
     def pipeline_state(self, pipeline_state):
         """Sets the pipeline_state of this ConnectionDetails.
 
-        The connection type’s release status in Stitch. Possible values are: alpha - The connection is in development and is not available in Stitch. beta - The connection is in open or closed beta and is available in Stitch. released - The connection is in general release and available in Stitch. deprecated - The connection has been deprecated and is no longer available in Stitch.   # noqa: E501
+        The connection type's release status in Stitch. Possible values are: alpha - The connection is in development and is not available in Stitch. beta - The connection is in open or closed beta and is available in Stitch. released - The connection is in general release and available in Stitch. deprecated - The connection has been deprecated and is no longer available in Stitch.   # noqa: E501
 
         :param pipeline_state: The pipeline_state of this ConnectionDetails.  # noqa: E501
         :type: str

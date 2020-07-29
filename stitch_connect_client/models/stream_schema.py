@@ -72,7 +72,7 @@ class StreamSchema(object):
     def schema(self):
         """Gets the schema of this StreamSchema.  # noqa: E501
 
-        The JSON schema describing the stream’s fields.  # noqa: E501
+        The JSON schema describing the stream's fields.  # noqa: E501
 
         :return: The schema of this StreamSchema.  # noqa: E501
         :rtype: str
@@ -83,7 +83,7 @@ class StreamSchema(object):
     def schema(self, schema):
         """Sets the schema of this StreamSchema.
 
-        The JSON schema describing the stream’s fields.  # noqa: E501
+        The JSON schema describing the stream's fields.  # noqa: E501
 
         :param schema: The schema of this StreamSchema.  # noqa: E501
         :type: str

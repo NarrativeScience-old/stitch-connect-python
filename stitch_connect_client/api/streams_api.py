@@ -34,7 +34,7 @@ class StreamsApi(object):
         self.api_client = api_client
 
     def get_stream_schema(self, source_id, stream_id, **kwargs):  # noqa: E501
-        """Retrieves the schema for a source’s stream by the source and stream’s unique identifiers.   # noqa: E501
+        """Retrieves the schema for a source's stream by the source and stream's unique identifiers.   # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
@@ -63,7 +63,7 @@ class StreamsApi(object):
     def get_stream_schema_with_http_info(
         self, source_id, stream_id, **kwargs
     ):  # noqa: E501
-        """Retrieves the schema for a source’s stream by the source and stream’s unique identifiers.   # noqa: E501
+        """Retrieves the schema for a source's stream by the source and stream's unique identifiers.   # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
@@ -282,7 +282,7 @@ class StreamsApi(object):
     def update_stream_metadata(
         self, source_id, streams_update_list, **kwargs
     ):  # noqa: E501
-        """Updates the metadata for streams and fields. This endpoint is used to define the metadata properties returned in the Stream Schema object’s non-discoverable-metadata-keys property.   # noqa: E501
+        """Updates the metadata for streams and fields. This endpoint is used to define the metadata properties returned in the Stream Schema object's non-discoverable-metadata-keys property.   # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
@@ -311,7 +311,7 @@ class StreamsApi(object):
     def update_stream_metadata_with_http_info(
         self, source_id, streams_update_list, **kwargs
     ):  # noqa: E501
-        """Updates the metadata for streams and fields. This endpoint is used to define the metadata properties returned in the Stream Schema object’s non-discoverable-metadata-keys property.   # noqa: E501
+        """Updates the metadata for streams and fields. This endpoint is used to define the metadata properties returned in the Stream Schema object's non-discoverable-metadata-keys property.   # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True

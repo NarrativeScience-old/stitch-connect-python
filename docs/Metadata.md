@@ -1,6 +1,6 @@
 # Metadata
 
-A Metadata object describes a stream’s schema and the current state of its configuration in Stitch, including its selection status, field inclusion list, Primary Keys, and Replication Method.
+A Metadata object describes a stream's schema and the current state of its configuration in Stitch, including its selection status, field inclusion list, Primary Keys, and Replication Method.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

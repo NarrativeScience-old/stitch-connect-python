@@ -6,10 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_source**](SourcesApi.md#create_source) | **POST** /v4/sources | Creates a source object, which is the first step in setting up a new data source. After the source object is created, additional configuration steps must be completed.
 [**delete_source**](SourcesApi.md#delete_source) | **DELETE** /v4/sources/{source_id} | Deletes an existing data source.
-[**get_last_connection_check**](SourcesApi.md#get_last_connection_check) | **GET** /v4/sources/{source_id}/last-connection-check | Retrieves the last connection check for a source by the source’s unique identifier.
+[**get_last_connection_check**](SourcesApi.md#get_last_connection_check) | **GET** /v4/sources/{source_id}/last-connection-check | Retrieves the last connection check for a source by the source&#39;s unique identifier.
 [**get_source**](SourcesApi.md#get_source) | **GET** /v4/sources/{source_id} | Retrieves a previously created data source by its unique identifier. This endpoint can be used to retrieve an active, paused, or deleted source.
 [**get_sources**](SourcesApi.md#get_sources) | **GET** /v4/sources | Lists the sources for an account, including active, paused, and deleted sources.
-[**start_replication**](SourcesApi.md#start_replication) | **POST** /v4/sources/{source_id}/sync | Manually starts a replication job for a source using the source’s unique identifier.
+[**start_replication**](SourcesApi.md#start_replication) | **POST** /v4/sources/{source_id}/sync | Manually starts a replication job for a source using the source&#39;s unique identifier.
 [**update_source**](SourcesApi.md#update_source) | **PUT** /v4/sources/{source_id} | Updates an existing data source.
 
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Successfully created new source |  -  |
-**400** | Cron expressions can’t specify both a day-of-week and day-of-month  |  -  |
+**400** | Cron expressions can&#39;t specify both a day-of-week and day-of-month  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 # **get_last_connection_check**
 > ConnectionCheck get_last_connection_check(source_id)
 
-Retrieves the last connection check for a source by the source’s unique identifier.
+Retrieves the last connection check for a source by the source's unique identifier.
 
 ### Example
 
@@ -155,7 +155,7 @@ api_instance = stitch_connect_client.SourcesApi(stitch_connect_client.ApiClient(
 source_id = 'source_id_example' # str | The ID of the source
 
 try:
-    # Retrieves the last connection check for a source by the source’s unique identifier.
+    # Retrieves the last connection check for a source by the source's unique identifier.
     api_response = api_instance.get_last_connection_check(source_id)
     pprint(api_response)
 except ApiException as e:
@@ -303,7 +303,7 @@ This endpoint does not need any parameter.
 # **start_replication**
 > ErrorObject start_replication(source_id)
 
-Manually starts a replication job for a source using the source’s unique identifier.
+Manually starts a replication job for a source using the source's unique identifier.
 
 ### Example
 
@@ -325,7 +325,7 @@ api_instance = stitch_connect_client.SourcesApi(stitch_connect_client.ApiClient(
 source_id = 'source_id_example' # str | The ID of the source
 
 try:
-    # Manually starts a replication job for a source using the source’s unique identifier.
+    # Manually starts a replication job for a source using the source's unique identifier.
     api_response = api_instance.start_replication(source_id)
     pprint(api_response)
 except ApiException as e:

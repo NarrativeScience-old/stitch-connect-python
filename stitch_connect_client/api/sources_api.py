@@ -273,7 +273,7 @@ class SourcesApi(object):
         )
 
     def get_last_connection_check(self, source_id, **kwargs):  # noqa: E501
-        """Retrieves the last connection check for a source by the source’s unique identifier.   # noqa: E501
+        """Retrieves the last connection check for a source by the source's unique identifier.   # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
@@ -301,7 +301,7 @@ class SourcesApi(object):
     def get_last_connection_check_with_http_info(
         self, source_id, **kwargs
     ):  # noqa: E501
-        """Retrieves the last connection check for a source by the source’s unique identifier.   # noqa: E501
+        """Retrieves the last connection check for a source by the source's unique identifier.   # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
@@ -610,7 +610,7 @@ class SourcesApi(object):
         )
 
     def start_replication(self, source_id, **kwargs):  # noqa: E501
-        """Manually starts a replication job for a source using the source’s unique identifier.   # noqa: E501
+        """Manually starts a replication job for a source using the source's unique identifier.   # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
@@ -634,7 +634,7 @@ class SourcesApi(object):
         return self.start_replication_with_http_info(source_id, **kwargs)  # noqa: E501
 
     def start_replication_with_http_info(self, source_id, **kwargs):  # noqa: E501
-        """Manually starts a replication job for a source using the source’s unique identifier.   # noqa: E501
+        """Manually starts a replication job for a source using the source's unique identifier.   # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True

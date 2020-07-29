@@ -1,6 +1,6 @@
 # DestinationReportCard
 
-A Destination Report Card object contains information about a destination’s connection configuration.
+A Destination Report Card object contains information about a destination's connection configuration.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

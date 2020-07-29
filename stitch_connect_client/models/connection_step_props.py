@@ -197,7 +197,7 @@ class ConnectionStepProps(object):
     def json_schema(self):
         """Gets the json_schema of this ConnectionStepProps.  # noqa: E501
 
-        Note: Data will only be returned for this array if property_type: user_provided or property_type: system_provided_by_default. If property_type: read_only, this property will be null. An array containing: type - A string indicating the expected data type of the property’s value. For example: boolean pattern - A string indicating the expected pattern of the property’s value. For example: ^\\\\d+$ anyOf - A series of arrays containing key-value pairs for the type and format combinations Stitch will accept as the property’s value   # noqa: E501
+        Note: Data will only be returned for this array if property_type: user_provided or property_type: system_provided_by_default. If property_type: read_only, this property will be null. An array containing: type - A string indicating the expected data type of the property's value. For example: boolean pattern - A string indicating the expected pattern of the property's value. For example: ^\\\\d+$ anyOf - A series of arrays containing key-value pairs for the type and format combinations Stitch will accept as the property's value   # noqa: E501
 
         :return: The json_schema of this ConnectionStepProps.  # noqa: E501
         :rtype: list[ConnectionStepPropsJsonSchema]
@@ -208,7 +208,7 @@ class ConnectionStepProps(object):
     def json_schema(self, json_schema):
         """Sets the json_schema of this ConnectionStepProps.
 
-        Note: Data will only be returned for this array if property_type: user_provided or property_type: system_provided_by_default. If property_type: read_only, this property will be null. An array containing: type - A string indicating the expected data type of the property’s value. For example: boolean pattern - A string indicating the expected pattern of the property’s value. For example: ^\\\\d+$ anyOf - A series of arrays containing key-value pairs for the type and format combinations Stitch will accept as the property’s value   # noqa: E501
+        Note: Data will only be returned for this array if property_type: user_provided or property_type: system_provided_by_default. If property_type: read_only, this property will be null. An array containing: type - A string indicating the expected data type of the property's value. For example: boolean pattern - A string indicating the expected pattern of the property's value. For example: ^\\\\d+$ anyOf - A series of arrays containing key-value pairs for the type and format combinations Stitch will accept as the property's value   # noqa: E501
 
         :param json_schema: The json_schema of this ConnectionStepProps.  # noqa: E501
         :type: list[ConnectionStepPropsJsonSchema]
