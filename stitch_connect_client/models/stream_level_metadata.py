@@ -193,7 +193,7 @@ class StreamLevelMetadata(object):
     def replication_key(self):
         """Gets the replication_key of this StreamLevelMetadata.  # noqa: E501
 
-        Indicates the field being used as the stream’s Replication Key.   # noqa: E501
+        Indicates the field being used as the stream's Replication Key.   # noqa: E501
 
         :return: The replication_key of this StreamLevelMetadata.  # noqa: E501
         :rtype: str
@@ -204,7 +204,7 @@ class StreamLevelMetadata(object):
     def replication_key(self, replication_key):
         """Sets the replication_key of this StreamLevelMetadata.
 
-        Indicates the field being used as the stream’s Replication Key.   # noqa: E501
+        Indicates the field being used as the stream's Replication Key.   # noqa: E501
 
         :param replication_key: The replication_key of this StreamLevelMetadata.  # noqa: E501
         :type: str
@@ -318,7 +318,7 @@ class StreamLevelMetadata(object):
     def table_key_properties(self):
         """Gets the table_key_properties of this StreamLevelMetadata.  # noqa: E501
 
-        An array of strings listing the fields that make up the key properties of the table. These are the table’s defined Primary Keys.   # noqa: E501
+        An array of strings listing the fields that make up the key properties of the table. These are the table's defined Primary Keys.   # noqa: E501
 
         :return: The table_key_properties of this StreamLevelMetadata.  # noqa: E501
         :rtype: list[str]
@@ -329,7 +329,7 @@ class StreamLevelMetadata(object):
     def table_key_properties(self, table_key_properties):
         """Sets the table_key_properties of this StreamLevelMetadata.
 
-        An array of strings listing the fields that make up the key properties of the table. These are the table’s defined Primary Keys.   # noqa: E501
+        An array of strings listing the fields that make up the key properties of the table. These are the table's defined Primary Keys.   # noqa: E501
 
         :param table_key_properties: The table_key_properties of this StreamLevelMetadata.  # noqa: E501
         :type: list[str]
@@ -387,7 +387,7 @@ class StreamLevelMetadata(object):
     def tap_google_analytics_all_cubes(self):
         """Gets the tap_google_analytics_all_cubes of this StreamLevelMetadata.  # noqa: E501
 
-        For Google Analytics sources only. An array of strings listing all the ‘cubes’ available in the Google Analytics source. A cube is a group of metrics and dimensions that are compatible together.   # noqa: E501
+        For Google Analytics sources only. An array of strings listing all the ‘cubes' available in the Google Analytics source. A cube is a group of metrics and dimensions that are compatible together.   # noqa: E501
 
         :return: The tap_google_analytics_all_cubes of this StreamLevelMetadata.  # noqa: E501
         :rtype: list[str]
@@ -398,7 +398,7 @@ class StreamLevelMetadata(object):
     def tap_google_analytics_all_cubes(self, tap_google_analytics_all_cubes):
         """Sets the tap_google_analytics_all_cubes of this StreamLevelMetadata.
 
-        For Google Analytics sources only. An array of strings listing all the ‘cubes’ available in the Google Analytics source. A cube is a group of metrics and dimensions that are compatible together.   # noqa: E501
+        For Google Analytics sources only. An array of strings listing all the ‘cubes' available in the Google Analytics source. A cube is a group of metrics and dimensions that are compatible together.   # noqa: E501
 
         :param tap_google_analytics_all_cubes: The tap_google_analytics_all_cubes of this StreamLevelMetadata.  # noqa: E501
         :type: list[str]

@@ -64,7 +64,7 @@ class ConnectionStepPropsJsonSchema(object):
     def type(self):
         """Gets the type of this ConnectionStepPropsJsonSchema.  # noqa: E501
 
-        A string indicating the expected data type of the property’s value. For example: boolean   # noqa: E501
+        A string indicating the expected data type of the property's value. For example: boolean   # noqa: E501
 
         :return: The type of this ConnectionStepPropsJsonSchema.  # noqa: E501
         :rtype: str
@@ -75,7 +75,7 @@ class ConnectionStepPropsJsonSchema(object):
     def type(self, type):
         """Sets the type of this ConnectionStepPropsJsonSchema.
 
-        A string indicating the expected data type of the property’s value. For example: boolean   # noqa: E501
+        A string indicating the expected data type of the property's value. For example: boolean   # noqa: E501
 
         :param type: The type of this ConnectionStepPropsJsonSchema.  # noqa: E501
         :type: str
@@ -87,7 +87,7 @@ class ConnectionStepPropsJsonSchema(object):
     def pattern(self):
         """Gets the pattern of this ConnectionStepPropsJsonSchema.  # noqa: E501
 
-        A string indicating the expected pattern of the property’s value. For example: ^\\\\d+$   # noqa: E501
+        A string indicating the expected pattern of the property's value. For example: ^\\\\d+$   # noqa: E501
 
         :return: The pattern of this ConnectionStepPropsJsonSchema.  # noqa: E501
         :rtype: str
@@ -98,7 +98,7 @@ class ConnectionStepPropsJsonSchema(object):
     def pattern(self, pattern):
         """Sets the pattern of this ConnectionStepPropsJsonSchema.
 
-        A string indicating the expected pattern of the property’s value. For example: ^\\\\d+$   # noqa: E501
+        A string indicating the expected pattern of the property's value. For example: ^\\\\d+$   # noqa: E501
 
         :param pattern: The pattern of this ConnectionStepPropsJsonSchema.  # noqa: E501
         :type: str
@@ -110,7 +110,7 @@ class ConnectionStepPropsJsonSchema(object):
     def any_of(self):
         """Gets the any_of of this ConnectionStepPropsJsonSchema.  # noqa: E501
 
-        A series of arrays containing key-value pairs for the type and format combinations Stitch will accept as the property’s value. F   # noqa: E501
+        A series of arrays containing key-value pairs for the type and format combinations Stitch will accept as the property's value. F   # noqa: E501
 
         :return: The any_of of this ConnectionStepPropsJsonSchema.  # noqa: E501
         :rtype: list[ConnectionStepPropsAnyOf]
@@ -121,7 +121,7 @@ class ConnectionStepPropsJsonSchema(object):
     def any_of(self, any_of):
         """Sets the any_of of this ConnectionStepPropsJsonSchema.
 
-        A series of arrays containing key-value pairs for the type and format combinations Stitch will accept as the property’s value. F   # noqa: E501
+        A series of arrays containing key-value pairs for the type and format combinations Stitch will accept as the property's value. F   # noqa: E501
 
         :param any_of: The any_of of this ConnectionStepPropsJsonSchema.  # noqa: E501
         :type: list[ConnectionStepPropsAnyOf]

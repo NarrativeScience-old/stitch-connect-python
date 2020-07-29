@@ -1,6 +1,6 @@
 # HookNotification
 
-A Hook Notification object contains information about a webhook configured in the account’s Post-load hook list.
+A Hook Notification object contains information about a webhook configured in the account's Post-load hook list.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

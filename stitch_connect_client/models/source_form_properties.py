@@ -48,6 +48,11 @@ class SourceFormProperties(object):
         "start_date": "str",
         "quota_user": "str",
         "report_definitions": "list[GoogleAnalyticsSourceFormPropertiesReportDefinitions]",
+        "api_secret": "str",
+        "attribution_window": "str",
+        "date_window_size": "str",
+        "project_timezone": "str",
+        "select_properties_by_default": "str",
     }
 
     attribute_map = {
@@ -66,6 +71,11 @@ class SourceFormProperties(object):
         "start_date": "start_date",
         "quota_user": "quota_user",
         "report_definitions": "report_definitions",
+        "api_secret": "api_secret",
+        "attribution_window": "attribution_window",
+        "date_window_size": "date_window_size",
+        "project_timezone": "project_timezone",
+        "select_properties_by_default": "select_properties_by_default",
     }
 
     def __init__(
@@ -85,6 +95,11 @@ class SourceFormProperties(object):
         start_date=None,
         quota_user=None,
         report_definitions=None,
+        api_secret=None,
+        attribution_window=None,
+        date_window_size=None,
+        project_timezone=None,
+        select_properties_by_default=None,
         local_vars_configuration=None,
     ):  # noqa: E501
         """SourceFormProperties - a model defined in OpenAPI"""  # noqa: E501
@@ -107,6 +122,11 @@ class SourceFormProperties(object):
         self._start_date = None
         self._quota_user = None
         self._report_definitions = None
+        self._api_secret = None
+        self._attribution_window = None
+        self._date_window_size = None
+        self._project_timezone = None
+        self._select_properties_by_default = None
         self.discriminator = None
 
         if anchor_time is not None:
@@ -133,18 +153,23 @@ class SourceFormProperties(object):
             self.refresh_token = refresh_token
         if select_fields_by_default is not None:
             self.select_fields_by_default = select_fields_by_default
-        if start_date is not None:
-            self.start_date = start_date
+        self.start_date = start_date
         if quota_user is not None:
             self.quota_user = quota_user
         if report_definitions is not None:
             self.report_definitions = report_definitions
+        self.api_secret = api_secret
+        self.attribution_window = attribution_window
+        self.date_window_size = date_window_size
+        self.project_timezone = project_timezone
+        if select_properties_by_default is not None:
+            self.select_properties_by_default = select_properties_by_default
 
     @property
     def anchor_time(self):
         """Gets the anchor_time of this SourceFormProperties.  # noqa: E501
 
-        Defines the time that frequency_in_minutes is “anchored” to, which Stitch will use to create the integration’s replication schedule. In Stitch, this is referred to as Anchor Scheduling. This field must contain an ISO 8601-compliant date. Note: When Stitch stores this value, it will be in UTC. You should provide this value in UTC to ensure the desired anchor time is retained. For example: You want to create a schedule that is anchored to 1:00PM EST and runs every 6 hours (360 minutes). To do this, you can set anchor_time to something like 2018-04-30T17:00:00Z and frequency_in_minutes to 360. This means jobs would run at 23:00:00, 05:00:00, 11:00:00, and so on.   # noqa: E501
+        Defines the time that frequency_in_minutes is \"anchored\" to, which Stitch will use to create the integration's replication schedule. In Stitch, this is referred to as Anchor Scheduling. This field must contain an ISO 8601-compliant date. Note: When Stitch stores this value, it will be in UTC. You should provide this value in UTC to ensure the desired anchor time is retained. For example: You want to create a schedule that is anchored to 1:00PM EST and runs every 6 hours (360 minutes). To do this, you can set anchor_time to something like 2018-04-30T17:00:00Z and frequency_in_minutes to 360. This means jobs would run at 23:00:00, 05:00:00, 11:00:00, and so on.   # noqa: E501
 
         :return: The anchor_time of this SourceFormProperties.  # noqa: E501
         :rtype: str
@@ -155,7 +180,7 @@ class SourceFormProperties(object):
     def anchor_time(self, anchor_time):
         """Sets the anchor_time of this SourceFormProperties.
 
-        Defines the time that frequency_in_minutes is “anchored” to, which Stitch will use to create the integration’s replication schedule. In Stitch, this is referred to as Anchor Scheduling. This field must contain an ISO 8601-compliant date. Note: When Stitch stores this value, it will be in UTC. You should provide this value in UTC to ensure the desired anchor time is retained. For example: You want to create a schedule that is anchored to 1:00PM EST and runs every 6 hours (360 minutes). To do this, you can set anchor_time to something like 2018-04-30T17:00:00Z and frequency_in_minutes to 360. This means jobs would run at 23:00:00, 05:00:00, 11:00:00, and so on.   # noqa: E501
+        Defines the time that frequency_in_minutes is \"anchored\" to, which Stitch will use to create the integration's replication schedule. In Stitch, this is referred to as Anchor Scheduling. This field must contain an ISO 8601-compliant date. Note: When Stitch stores this value, it will be in UTC. You should provide this value in UTC to ensure the desired anchor time is retained. For example: You want to create a schedule that is anchored to 1:00PM EST and runs every 6 hours (360 minutes). To do this, you can set anchor_time to something like 2018-04-30T17:00:00Z and frequency_in_minutes to 360. This means jobs would run at 23:00:00, 05:00:00, 11:00:00, and so on.   # noqa: E501
 
         :param anchor_time: The anchor_time of this SourceFormProperties.  # noqa: E501
         :type: str
@@ -236,7 +261,7 @@ class SourceFormProperties(object):
     def cron_expression(self):
         """Gets the cron_expression of this SourceFormProperties.  # noqa: E501
 
-        Note: Advanced Scheduling using Cron is not yet supported for this source. A value may be submitted for this property if the account is on an Enterprise plan, but Stitch will not use the expression submitted. A valid Quartz cron expression representing the replication schedule for the integration. Refer to the Advanced Scheduling documentation for more info. Note: If neither a cron_expression or frequency_in_minutes property is provided, Stitch will use the source’s default frequency_in_minutes value (60).   # noqa: E501
+        Note: Advanced Scheduling using Cron is not yet supported for this source. A value may be submitted for this property if the account is on an Enterprise plan, but Stitch will not use the expression submitted. A valid Quartz cron expression representing the replication schedule for the integration. Refer to the Advanced Scheduling documentation for more info. Note: If neither a cron_expression or frequency_in_minutes property is provided, Stitch will use the source's default frequency_in_minutes value (60).   # noqa: E501
 
         :return: The cron_expression of this SourceFormProperties.  # noqa: E501
         :rtype: str
@@ -247,7 +272,7 @@ class SourceFormProperties(object):
     def cron_expression(self, cron_expression):
         """Sets the cron_expression of this SourceFormProperties.
 
-        Note: Advanced Scheduling using Cron is not yet supported for this source. A value may be submitted for this property if the account is on an Enterprise plan, but Stitch will not use the expression submitted. A valid Quartz cron expression representing the replication schedule for the integration. Refer to the Advanced Scheduling documentation for more info. Note: If neither a cron_expression or frequency_in_minutes property is provided, Stitch will use the source’s default frequency_in_minutes value (60).   # noqa: E501
+        Note: Advanced Scheduling using Cron is not yet supported for this source. A value may be submitted for this property if the account is on an Enterprise plan, but Stitch will not use the expression submitted. A valid Quartz cron expression representing the replication schedule for the integration. Refer to the Advanced Scheduling documentation for more info. Note: If neither a cron_expression or frequency_in_minutes property is provided, Stitch will use the source's default frequency_in_minutes value (60).   # noqa: E501
 
         :param cron_expression: The cron_expression of this SourceFormProperties.  # noqa: E501
         :type: str
@@ -436,6 +461,12 @@ class SourceFormProperties(object):
         :param start_date: The start_date of this SourceFormProperties.  # noqa: E501
         :type: str
         """
+        if (
+            self.local_vars_configuration.client_side_validation and start_date is None
+        ):  # noqa: E501
+            raise ValueError(
+                "Invalid value for `start_date`, must not be `None`"
+            )  # noqa: E501
 
         self._start_date = start_date
 
@@ -484,6 +515,148 @@ class SourceFormProperties(object):
         """
 
         self._report_definitions = report_definitions
+
+    @property
+    def api_secret(self):
+        """Gets the api_secret of this SourceFormProperties.  # noqa: E501
+
+        The API secret of your project in your Mixpanel account. Refer to the Mixpanel documentation for instructions on obtaining this information.   # noqa: E501
+
+        :return: The api_secret of this SourceFormProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._api_secret
+
+    @api_secret.setter
+    def api_secret(self, api_secret):
+        """Sets the api_secret of this SourceFormProperties.
+
+        The API secret of your project in your Mixpanel account. Refer to the Mixpanel documentation for instructions on obtaining this information.   # noqa: E501
+
+        :param api_secret: The api_secret of this SourceFormProperties.  # noqa: E501
+        :type: str
+        """
+        if (
+            self.local_vars_configuration.client_side_validation and api_secret is None
+        ):  # noqa: E501
+            raise ValueError(
+                "Invalid value for `api_secret`, must not be `None`"
+            )  # noqa: E501
+
+        self._api_secret = api_secret
+
+    @property
+    def attribution_window(self):
+        """Gets the attribution_window of this SourceFormProperties.  # noqa: E501
+
+        Defines the number, in days, Stitch should use as an attribution window. To ensure your Mixpanel and Stitch settings align, we recommend using the same attribution window in Stitch that you use in Mixpanel. Mixpanel's default attribution window is five days (5). Refer to the Mixpanel documentation for more information about attribution windows for this integration.   # noqa: E501
+
+        :return: The attribution_window of this SourceFormProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._attribution_window
+
+    @attribution_window.setter
+    def attribution_window(self, attribution_window):
+        """Sets the attribution_window of this SourceFormProperties.
+
+        Defines the number, in days, Stitch should use as an attribution window. To ensure your Mixpanel and Stitch settings align, we recommend using the same attribution window in Stitch that you use in Mixpanel. Mixpanel's default attribution window is five days (5). Refer to the Mixpanel documentation for more information about attribution windows for this integration.   # noqa: E501
+
+        :param attribution_window: The attribution_window of this SourceFormProperties.  # noqa: E501
+        :type: str
+        """
+        if (
+            self.local_vars_configuration.client_side_validation
+            and attribution_window is None
+        ):  # noqa: E501
+            raise ValueError(
+                "Invalid value for `attribution_window`, must not be `None`"
+            )  # noqa: E501
+
+        self._attribution_window = attribution_window
+
+    @property
+    def date_window_size(self):
+        """Gets the date_window_size of this SourceFormProperties.  # noqa: E501
+
+        Defines the number, in days, for a date looping window for the export, funnel, and revenue tables. Date looping will return records whose from_date and to_date fall between the number of days in the defined window size. Note: If your project has large volumes of events, you may want to set the number of days to 14, 7, or even to 1 or 2 days.   # noqa: E501
+
+        :return: The date_window_size of this SourceFormProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._date_window_size
+
+    @date_window_size.setter
+    def date_window_size(self, date_window_size):
+        """Sets the date_window_size of this SourceFormProperties.
+
+        Defines the number, in days, for a date looping window for the export, funnel, and revenue tables. Date looping will return records whose from_date and to_date fall between the number of days in the defined window size. Note: If your project has large volumes of events, you may want to set the number of days to 14, 7, or even to 1 or 2 days.   # noqa: E501
+
+        :param date_window_size: The date_window_size of this SourceFormProperties.  # noqa: E501
+        :type: str
+        """
+        if (
+            self.local_vars_configuration.client_side_validation
+            and date_window_size is None
+        ):  # noqa: E501
+            raise ValueError(
+                "Invalid value for `date_window_size`, must not be `None`"
+            )  # noqa: E501
+
+        self._date_window_size = date_window_size
+
+    @property
+    def project_timezone(self):
+        """Gets the project_timezone of this SourceFormProperties.  # noqa: E501
+
+        The timezone in which your date-time fields are stored for your project. You can find your project timezone in the project settings in the Mixpanel console   # noqa: E501
+
+        :return: The project_timezone of this SourceFormProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._project_timezone
+
+    @project_timezone.setter
+    def project_timezone(self, project_timezone):
+        """Sets the project_timezone of this SourceFormProperties.
+
+        The timezone in which your date-time fields are stored for your project. You can find your project timezone in the project settings in the Mixpanel console   # noqa: E501
+
+        :param project_timezone: The project_timezone of this SourceFormProperties.  # noqa: E501
+        :type: str
+        """
+        if (
+            self.local_vars_configuration.client_side_validation
+            and project_timezone is None
+        ):  # noqa: E501
+            raise ValueError(
+                "Invalid value for `project_timezone`, must not be `None`"
+            )  # noqa: E501
+
+        self._project_timezone = project_timezone
+
+    @property
+    def select_properties_by_default(self):
+        """Gets the select_properties_by_default of this SourceFormProperties.  # noqa: E501
+
+        A configuration parameter - the only accepted values are true and false. When set to true, this parameter captures new properties in the events and engage tables' records. If set to false, new properties will be ignored.   # noqa: E501
+
+        :return: The select_properties_by_default of this SourceFormProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._select_properties_by_default
+
+    @select_properties_by_default.setter
+    def select_properties_by_default(self, select_properties_by_default):
+        """Sets the select_properties_by_default of this SourceFormProperties.
+
+        A configuration parameter - the only accepted values are true and false. When set to true, this parameter captures new properties in the events and engage tables' records. If set to false, new properties will be ignored.   # noqa: E501
+
+        :param select_properties_by_default: The select_properties_by_default of this SourceFormProperties.  # noqa: E501
+        :type: str
+        """
+
+        self._select_properties_by_default = select_properties_by_default
 
     def to_dict(self):
         """Returns the model properties as a dict"""

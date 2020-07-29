@@ -141,7 +141,7 @@ class FieldLevelMetadata(object):
     def selected(self):
         """Gets the selected of this FieldLevelMetadata.  # noqa: E501
 
-        Indicates whether a field should be included in a stream’s field selection list. This value will be present only if the stream containing the field is selected (selected: true). null - The value has not been set true - The field is selected false - The field is not selected   # noqa: E501
+        Indicates whether a field should be included in a stream's field selection list. This value will be present only if the stream containing the field is selected (selected: true). null - The value has not been set true - The field is selected false - The field is not selected   # noqa: E501
 
         :return: The selected of this FieldLevelMetadata.  # noqa: E501
         :rtype: bool
@@ -152,7 +152,7 @@ class FieldLevelMetadata(object):
     def selected(self, selected):
         """Sets the selected of this FieldLevelMetadata.
 
-        Indicates whether a field should be included in a stream’s field selection list. This value will be present only if the stream containing the field is selected (selected: true). null - The value has not been set true - The field is selected false - The field is not selected   # noqa: E501
+        Indicates whether a field should be included in a stream's field selection list. This value will be present only if the stream containing the field is selected (selected: true). null - The value has not been set true - The field is selected false - The field is not selected   # noqa: E501
 
         :param selected: The selected of this FieldLevelMetadata.  # noqa: E501
         :type: bool
@@ -256,7 +256,7 @@ class FieldLevelMetadata(object):
     def tap_google_analytics_cubes(self):
         """Gets the tap_google_analytics_cubes of this FieldLevelMetadata.  # noqa: E501
 
-        For Google Analytics sources only. An array of strings containing the ‘cubes’ the field is a part of. A cube is a group of metrics and dimensions that are compatible together.   # noqa: E501
+        For Google Analytics sources only. An array of strings containing the ‘cubes' the field is a part of. A cube is a group of metrics and dimensions that are compatible together.   # noqa: E501
 
         :return: The tap_google_analytics_cubes of this FieldLevelMetadata.  # noqa: E501
         :rtype: list[str]
@@ -267,7 +267,7 @@ class FieldLevelMetadata(object):
     def tap_google_analytics_cubes(self, tap_google_analytics_cubes):
         """Sets the tap_google_analytics_cubes of this FieldLevelMetadata.
 
-        For Google Analytics sources only. An array of strings containing the ‘cubes’ the field is a part of. A cube is a group of metrics and dimensions that are compatible together.   # noqa: E501
+        For Google Analytics sources only. An array of strings containing the ‘cubes' the field is a part of. A cube is a group of metrics and dimensions that are compatible together.   # noqa: E501
 
         :param tap_google_analytics_cubes: The tap_google_analytics_cubes of this FieldLevelMetadata.  # noqa: E501
         :type: list[str]
@@ -302,7 +302,7 @@ class FieldLevelMetadata(object):
     def behavior(self):
         """Gets the behavior of this FieldLevelMetadata.  # noqa: E501
 
-        For Google Analytics and Google Ads sources only. The type of field. Possible values are: - ATTRIBUTE - Goolgle Ads sources only - METRIC - DIMENSION - Google Analytics sources only - SEGMENT - Goolgle Ads sources only Note: This property won’t be present for Google Analytics fields where tap_google_analytics.group: Report Fields.   # noqa: E501
+        For Google Analytics and Google Ads sources only. The type of field. Possible values are: - ATTRIBUTE - Goolgle Ads sources only - METRIC - DIMENSION - Google Analytics sources only - SEGMENT - Goolgle Ads sources only Note: This property won't be present for Google Analytics fields where tap_google_analytics.group: Report Fields.   # noqa: E501
 
         :return: The behavior of this FieldLevelMetadata.  # noqa: E501
         :rtype: str
@@ -313,7 +313,7 @@ class FieldLevelMetadata(object):
     def behavior(self, behavior):
         """Sets the behavior of this FieldLevelMetadata.
 
-        For Google Analytics and Google Ads sources only. The type of field. Possible values are: - ATTRIBUTE - Goolgle Ads sources only - METRIC - DIMENSION - Google Analytics sources only - SEGMENT - Goolgle Ads sources only Note: This property won’t be present for Google Analytics fields where tap_google_analytics.group: Report Fields.   # noqa: E501
+        For Google Analytics and Google Ads sources only. The type of field. Possible values are: - ATTRIBUTE - Goolgle Ads sources only - METRIC - DIMENSION - Google Analytics sources only - SEGMENT - Goolgle Ads sources only Note: This property won't be present for Google Analytics fields where tap_google_analytics.group: Report Fields.   # noqa: E501
 
         :param behavior: The behavior of this FieldLevelMetadata.  # noqa: E501
         :type: str

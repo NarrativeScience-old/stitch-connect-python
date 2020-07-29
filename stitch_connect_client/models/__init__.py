@@ -53,6 +53,9 @@ from stitch_connect_client.models.hook_notification import HookNotification
 from stitch_connect_client.models.hook_notification_config import HookNotificationConfig
 from stitch_connect_client.models.metadata import Metadata
 from stitch_connect_client.models.metadata_object import MetadataObject
+from stitch_connect_client.models.mixpanel_source_form_properties import (
+    MixpanelSourceFormProperties,
+)
 from stitch_connect_client.models.replication_job import ReplicationJob
 from stitch_connect_client.models.s3_destination_form_properties import (
     S3DestinationFormProperties,

@@ -1,6 +1,6 @@
 # SourceReportCard
 
-A Source Report Card object contains information about a source’s connection configuration.
+A Source Report Card object contains information about a source's connection configuration.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
