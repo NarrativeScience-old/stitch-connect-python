@@ -68,7 +68,9 @@ class RESTClientObject(object):
             ssl_context.verify_mode = ssl.CERT_NONE
 
         loop = asyncio.get_event_loop()
-        logger.debug(f"The running asyncio loop: {loop}")
+        print("\n\n\n\n\n-----------------------------")
+        print(loop)
+        print("-----------------------------\n\n\n\n\n")
         connector = aiohttp.TCPConnector(limit=maxsize, ssl=ssl_context, loop=loop)
 
         # https pool manager
