@@ -37,6 +37,7 @@ class CreateSourceBody(object):
         "type": "str",
         "name": "str",
         "properties": "SourceFormProperties",
+        "destination_id": "integer",
     }
 
     attribute_map = {
@@ -44,6 +45,7 @@ class CreateSourceBody(object):
         "type": "type",
         "name": "name",
         "properties": "properties",
+        "destination_id": "destination_id",
     }
 
     def __init__(
@@ -53,6 +55,7 @@ class CreateSourceBody(object):
         name=None,
         properties=None,
         local_vars_configuration=None,
+        destination_id=None,
     ):  # noqa: E501
         """CreateSourceBody - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
@@ -64,6 +67,7 @@ class CreateSourceBody(object):
         self._name = None
         self._properties = None
         self.discriminator = None
+        self.destination_id = None
 
         self.display_name = display_name
         self.type = type
@@ -174,6 +178,27 @@ class CreateSourceBody(object):
         """
 
         self._properties = properties
+
+    @property
+    def destination_id(self):
+        """Gets the destination_id of this CreateSourceBody.  # noqa: E501
+
+
+        :return: The destination_id of this CreateSourceBody.  # noqa: E501
+        :rtype: integer
+        """
+        return self.destination_id
+
+    @properties.setter
+    def destination_id(self, destination_id):
+        """Sets the destination_id of this CreateSourceBody.
+
+
+        :param destination_id: The destination_id  this CreateSourceBody.  # noqa: E501
+        :type: integer
+        """
+
+        self.destination_id = destination_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""
