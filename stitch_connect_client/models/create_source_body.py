@@ -37,7 +37,7 @@ class CreateSourceBody(object):
         "type": "str",
         "name": "str",
         "properties": "SourceFormProperties",
-        "destination_id": "integer"
+        "destination_id": "integer",
     }
 
     attribute_map = {
@@ -45,7 +45,7 @@ class CreateSourceBody(object):
         "type": "type",
         "name": "name",
         "properties": "properties",
-        "destination_id": "destination_id"
+        "destination_id": "destination_id",
     }
 
     def __init__(
@@ -55,7 +55,7 @@ class CreateSourceBody(object):
         name=None,
         properties=None,
         local_vars_configuration=None,
-        destination_id=None
+        destination_id=None,
     ):  # noqa: E501
         """CreateSourceBody - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
