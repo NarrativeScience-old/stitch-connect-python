@@ -88,4 +88,4 @@ from stitch_connect_client.models.stream_update import StreamUpdate
 from stitch_connect_client.models.streams_update_list import StreamsUpdateList
 from stitch_connect_client.models.update_source_body import UpdateSourceBody
 
-__version__ = "0.6.1"
+__version__ = "0.6.2"

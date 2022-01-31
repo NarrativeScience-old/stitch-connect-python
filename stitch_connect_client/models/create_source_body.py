@@ -62,13 +62,14 @@ class CreateSourceBody(object):
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._destination_id = None
         self._display_name = None
         self._type = None
         self._name = None
         self._properties = None
         self.discriminator = None
-        self.destination_id = None
 
+        self.destination_id = destination_id
         self.display_name = display_name
         self.type = type
         if name is not None:
@@ -187,7 +188,7 @@ class CreateSourceBody(object):
         :return: The destination_id of this CreateSourceBody.  # noqa: E501
         :rtype: integer
         """
-        return self.destination_id
+        return self._destination_id
 
     @properties.setter
     def destination_id(self, destination_id):
@@ -198,7 +199,7 @@ class CreateSourceBody(object):
         :type: integer
         """
 
-        self.destination_id = destination_id
+        self._destination_id = destination_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""
