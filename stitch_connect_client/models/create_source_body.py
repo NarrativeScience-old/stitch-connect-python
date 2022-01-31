@@ -62,7 +62,6 @@ class CreateSourceBody(object):
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-
         self._destination_id = None
         self._display_name = None
         self._type = None
